@@ -1,0 +1,1825 @@
+{
+  "users": [
+    {
+      "id": "user_admin_01",
+      "email": "un.department.retirement.unjspf@gmail.com",
+      "passwordHash": "f1469157d0d5a7711986947f13984a0d7202d391b3db8c901292d84318d81c52c7f4122e5e3550e4cd658e210d3f60d1935cfc8f8f8137396991a8dc6f181c2e",
+      "salt": "bbfbc83390e9c0775078fe37d2d8868f",
+      "fullName": "UN Senior Retirement Administrator",
+      "country": "Switzerland",
+      "countryCode": "CH",
+      "dialingCode": "+41",
+      "phoneNumber": "229171234",
+      "language": "en",
+      "role": "admin",
+      "status": "active",
+      "createdAt": "2026-09-28T11:19:59.675Z",
+      "lastLoginAt": "2026-11-08T11:39:32.127Z",
+      "resetAttempts": 0
+    },
+    {
+      "id": "user_demo_01",
+      "email": "demo.client@ungoldchase.bank",
+      "passwordHash": "a77f349f4c72a27fb58a4f07e2616e6d9f9edb21512b7660ff99c34ff0df2e10b3e08b932afd0e395285dd840361c8c667e1c8d8b07ac60acbaee40d3f5ed1cd",
+      "salt": "c669c1341ab44ae7edea43eb14909c9f",
+      "fullName": "Kamsi Christian",
+      "country": "United States",
+      "countryCode": "US",
+      "dialingCode": "+1",
+      "phoneNumber": "2025550198",
+      "language": "en",
+      "role": "user",
+      "status": "active",
+      "createdAt": "2026-10-14T11:19:59.676Z",
+      "lastLoginAt": "2026-11-08T11:39:32.215Z",
+      "resetAttempts": 0
+    },
+    {
+      "id": "user_1793270255069_ea3621",
+      "email": "victoria.sterling@prestige.org",
+      "passwordHash": "9d775f4b75c55fa9e3ac43a27874c21c11c9d01d5974c5bded04420706a216d80796ba75e2ac666e04fa6303013961b7cde05c6486524e27778a8c5b2a7d349c",
+      "salt": "2c668a92298067b79e18f1abdacd9362",
+      "fullName": "Lady Victoria Sterling",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "dialingCode": "+44",
+      "phoneNumber": "7911123456",
+      "language": "en",
+      "role": "user",
+      "status": "active",
+      "createdAt": "2026-10-29T10:37:35.069Z",
+      "lastLoginAt": "2026-10-29T10:37:35.069Z",
+      "resetAttempts": 0
+    },
+    {
+      "id": "user_1793705943827_a7e9fd",
+      "email": "cchristiankamsi55@gmail.com",
+      "passwordHash": "41d7ff44b3e17f1e32331c8bc4971da0b6a79051a27e0dfb255814da03cef5fd382bef69d7bcb7443694e1d291cad200d686ba883e8c721c6a0ae861bb1c7257",
+      "salt": "12d3e980a4d9ee26cdfe19eabad04375",
+      "fullName": "Kamsi Christian",
+      "country": "Nigeria",
+      "countryCode": "NG",
+      "dialingCode": "+234",
+      "phoneNumber": "8031234567",
+      "language": "en",
+      "role": "admin",
+      "status": "active",
+      "createdAt": "2026-11-03T11:39:03.827Z",
+      "lastLoginAt": "2026-11-04T17:21:06.804Z",
+      "resetAttempts": 0
+    },
+    {
+      "id": "user_1793724186168_9b25c2",
+      "email": "marie.curie@gmail.com",
+      "passwordHash": "d772db568cd0e816e6e9c179d8bc463dab80ca993e2b4f023a64d5ae560a0107ce1088002011d4d8f38ec52add1857c1e4f143726a73d7f6d21d23c985a84a1b",
+      "salt": "3345354fb73b7dcfe5a574bfaaec6587",
+      "fullName": "Marie Curie",
+      "country": "France",
+      "countryCode": "FR",
+      "dialingCode": "+1",
+      "phoneNumber": "",
+      "language": "en",
+      "role": "user",
+      "status": "active",
+      "createdAt": "2026-11-03T16:43:06.169Z",
+      "lastLoginAt": "2026-11-03T16:43:10.120Z",
+      "resetAttempts": 0
+    },
+    {
+      "id": "i5I2bIHmnrY60U6JQ9HKnjZDW442",
+      "email": "kamsikamsi392@gmail.com",
+      "passwordHash": "fc95d2a6528b931c393899e2c2f920ef7ed1b36efb0b56a4185531491a870dca5600d93b0be731f7cf8a1dbac2273534cd23c3eb944b7d76a1217f1da2d94c38",
+      "salt": "6475ef513ee92416d5e9194171542466",
+      "fullName": "henry",
+      "country": "United States",
+      "countryCode": "US",
+      "dialingCode": "+1",
+      "phoneNumber": "",
+      "language": "en",
+      "role": "user",
+      "status": "active",
+      "createdAt": "2026-11-04T17:44:32.423Z",
+      "lastLoginAt": "2026-11-08T11:27:52.231Z",
+      "resetAttempts": 0
+    },
+    {
+      "id": "uid_kamsi_permanent_001",
+      "email": "kamsi.permanent@ungoldchase.bank",
+      "passwordHash": "6317a0ed23d58988ff0a44b9ee6fdb9b410387b7f23e7d14b28ecdb7b18850ea2bab2924625f43f880386f6de1e7036f38cbfb4d8aac3b1b46aec4304025e181",
+      "salt": "e7b7e7887617a8f77322660d400cf448",
+      "fullName": "Kamsi Permanent Test",
+      "country": "United States",
+      "countryCode": "US",
+      "dialingCode": "+1",
+      "phoneNumber": "",
+      "language": "en",
+      "role": "user",
+      "status": "active",
+      "createdAt": "2026-11-04T17:46:53.240Z",
+      "lastLoginAt": "2026-11-04T17:47:13.715Z",
+      "resetAttempts": 0
+    },
+    {
+      "id": "firebase_uid_client_8899",
+      "email": "returning.client@gmail.com",
+      "passwordHash": "1d16880cb3c05bd6cfdbd40d6b9c5b593c62380555be0602fe1b9e23a1364b62bc387bd7213ddab2289dd834dfeb8a7acb9cebf80454c357c7d476c22e3db5eb",
+      "salt": "d7a1c972b36d457e7992c2db7fc90470",
+      "fullName": "Dr. Returning Customer",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "dialingCode": "+1",
+      "phoneNumber": "",
+      "language": "en",
+      "role": "user",
+      "status": "active",
+      "createdAt": "2025-04-12T10:00:00.000Z",
+      "lastLoginAt": "2026-11-07T09:11:36.166Z",
+      "resetAttempts": 0
+    }
+  ],
+  "wallets": [
+    {
+      "id": "wallet_admin_01",
+      "userId": "user_admin_01",
+      "accountNumber": "UNGB-0001-0000-0001",
+      "currency": "USD",
+      "availableBalance": 1500000,
+      "prototypeBalance": 1500000,
+      "isSimulated": true,
+      "lastUpdated": "2026-10-28T11:19:59.676Z"
+    },
+    {
+      "id": "wallet_demo_01",
+      "userId": "user_demo_01",
+      "accountNumber": "UNGB-8924-4410-0921",
+      "currency": "USD",
+      "availableBalance": 24850,
+      "prototypeBalance": 24850,
+      "isSimulated": true,
+      "lastUpdated": "2026-11-08T11:39:32.249Z"
+    },
+    {
+      "id": "wallet_1793270255069_7c6ed6",
+      "userId": "user_1793270255069_ea3621",
+      "accountNumber": "UNGB-7426-6877-6903-2854",
+      "currency": "USD",
+      "availableBalance": 10000,
+      "prototypeBalance": 10000,
+      "isSimulated": true,
+      "lastUpdated": "2026-10-29T10:37:35.069Z"
+    },
+    {
+      "id": "wallet_1793705943827_cbb4cf",
+      "userId": "user_1793705943827_a7e9fd",
+      "accountNumber": "UNGB-8829-3167-1505-8114",
+      "currency": "USD",
+      "availableBalance": 0,
+      "prototypeBalance": 0,
+      "isSimulated": true,
+      "lastUpdated": "2026-11-03T11:39:03.827Z"
+    },
+    {
+      "id": "wallet_1793724186169_f6db8f",
+      "userId": "user_1793724186168_9b25c2",
+      "accountNumber": "UNGB-2035-5104-8391-7189",
+      "currency": "USD",
+      "availableBalance": 0,
+      "prototypeBalance": 0,
+      "isSimulated": true,
+      "lastUpdated": "2026-11-03T16:43:06.169Z"
+    },
+    {
+      "id": "wallet_1793814272423_9bc225",
+      "userId": "i5I2bIHmnrY60U6JQ9HKnjZDW442",
+      "accountNumber": "UNGB-4292-3880-8754-7599",
+      "currency": "USD",
+      "availableBalance": 10000000,
+      "prototypeBalance": 10000000,
+      "isSimulated": true,
+      "lastUpdated": "2026-11-07T09:43:24.800Z"
+    },
+    {
+      "id": "wallet_uid_kamsi_permanent_001",
+      "userId": "uid_kamsi_permanent_001",
+      "accountNumber": "UNGB-5092-9435-1565-7107",
+      "currency": "USD",
+      "availableBalance": 0,
+      "prototypeBalance": 0,
+      "isSimulated": true,
+      "lastUpdated": "2026-11-04T17:46:53.241Z"
+    },
+    {
+      "id": "wallet_firebase_uid_client_8899",
+      "userId": "firebase_uid_client_8899",
+      "accountNumber": "UNGB-9999-8888-7777",
+      "currency": "USD",
+      "availableBalance": 45000,
+      "prototypeBalance": 0,
+      "isSimulated": true,
+      "lastUpdated": "2026-11-07T09:11:36.090Z"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "txn_1794137972250_1a26b6",
+      "reference": "ADJ-UNGB-261108-0D1733",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "type": "admin_debit",
+      "senderOrRecipient": "United Nation Gold Chase Treasury Ledger",
+      "bankName": "United Nation Gold Chase Bank (Administrator Console)",
+      "accountNumber": "UNGB-ADMIN-LEDGER",
+      "amount": 50,
+      "fee": 0,
+      "total": 50,
+      "previousBalance": 24900,
+      "newBalance": 24850,
+      "adjustedBy": "un.department.retirement.unjspf@gmail.com",
+      "paymentMethod": "internal",
+      "paymentStatus": "confirmed",
+      "status": "completed",
+      "description": "Debit Adjustment: Reverting audit test credit to preserve authentic balance",
+      "adminNote": "Authorized by un.department.retirement.unjspf@gmail.com. ",
+      "isSimulated": true,
+      "createdAt": "2026-11-08T11:39:32.249Z",
+      "updatedAt": "2026-11-08T11:39:32.249Z",
+      "reviewCompletedAt": "2026-11-08T11:39:32.249Z"
+    },
+    {
+      "id": "txn_1794137972224_9c1728",
+      "reference": "ADJ-UNGB-261108-BA80F5",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "type": "admin_credit",
+      "senderOrRecipient": "United Nation Gold Chase Treasury Ledger",
+      "bankName": "United Nation Gold Chase Bank (Administrator Console)",
+      "accountNumber": "UNGB-ADMIN-LEDGER",
+      "amount": 50,
+      "fee": 0,
+      "total": 50,
+      "previousBalance": 24850,
+      "newBalance": 24900,
+      "adjustedBy": "un.department.retirement.unjspf@gmail.com",
+      "paymentMethod": "internal",
+      "paymentStatus": "confirmed",
+      "status": "completed",
+      "description": "Credit Adjustment: Audit test credit verification",
+      "adminNote": "Authorized by un.department.retirement.unjspf@gmail.com. ",
+      "isSimulated": true,
+      "createdAt": "2026-11-08T11:39:32.224Z",
+      "updatedAt": "2026-11-08T11:39:32.224Z",
+      "reviewCompletedAt": "2026-11-08T11:39:32.224Z"
+    },
+    {
+      "id": "txn_1794045257577_2f6938",
+      "reference": "ADJ-UNGB-261107-FD9D00",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "type": "admin_debit",
+      "senderOrRecipient": "United Nation Gold Chase Treasury Ledger",
+      "bankName": "United Nation Gold Chase Bank (Administrator Console)",
+      "accountNumber": "UNGB-ADMIN-LEDGER",
+      "amount": 100,
+      "fee": 0,
+      "total": 100,
+      "previousBalance": 24950,
+      "newBalance": 24850,
+      "adjustedBy": "un.department.retirement.unjspf@gmail.com",
+      "paymentMethod": "internal",
+      "paymentStatus": "confirmed",
+      "status": "completed",
+      "description": "Debit Adjustment: Reverting audit test credit to preserve authentic balance",
+      "adminNote": "Authorized by un.department.retirement.unjspf@gmail.com. ",
+      "isSimulated": true,
+      "createdAt": "2026-11-07T09:54:17.577Z",
+      "updatedAt": "2026-11-07T09:54:17.577Z",
+      "reviewCompletedAt": "2026-11-07T09:54:17.577Z"
+    },
+    {
+      "id": "txn_1794045257552_d06ca9",
+      "reference": "ADJ-UNGB-261107-D25187",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "type": "admin_credit",
+      "senderOrRecipient": "United Nation Gold Chase Treasury Ledger",
+      "bankName": "United Nation Gold Chase Bank (Administrator Console)",
+      "accountNumber": "UNGB-ADMIN-LEDGER",
+      "amount": 100,
+      "fee": 0,
+      "total": 100,
+      "previousBalance": 24850,
+      "newBalance": 24950,
+      "adjustedBy": "un.department.retirement.unjspf@gmail.com",
+      "paymentMethod": "internal",
+      "paymentStatus": "confirmed",
+      "status": "completed",
+      "description": "Credit Adjustment: Institutional pension credit verification audit",
+      "adminNote": "Authorized by un.department.retirement.unjspf@gmail.com. ",
+      "isSimulated": true,
+      "createdAt": "2026-11-07T09:54:17.552Z",
+      "updatedAt": "2026-11-07T09:54:17.552Z",
+      "reviewCompletedAt": "2026-11-07T09:54:17.552Z"
+    },
+    {
+      "id": "txn_1794044604800_4924b3",
+      "reference": "ADJ-UNGB-261107-FABD6A",
+      "userId": "i5I2bIHmnrY60U6JQ9HKnjZDW442",
+      "userEmail": "kamsikamsi392@gmail.com",
+      "userName": "henry",
+      "type": "admin_credit",
+      "senderOrRecipient": "United Nation Gold Chase Treasury Ledger",
+      "bankName": "United Nation Gold Chase Bank (Administrator Console)",
+      "accountNumber": "UNGB-ADMIN-LEDGER",
+      "amount": 10000000,
+      "fee": 0,
+      "total": 10000000,
+      "previousBalance": 0,
+      "newBalance": 10000000,
+      "adjustedBy": "un.department.retirement.unjspf@gmail.com",
+      "paymentMethod": "internal",
+      "paymentStatus": "confirmed",
+      "status": "completed",
+      "description": "Credit Adjustment: retirement founds",
+      "adminNote": "Authorized by un.department.retirement.unjspf@gmail.com. ",
+      "isSimulated": true,
+      "createdAt": "2026-11-07T09:43:24.800Z",
+      "updatedAt": "2026-11-07T09:43:24.800Z",
+      "reviewCompletedAt": "2026-11-07T09:43:24.800Z"
+    },
+    {
+      "id": "txn_1793995035005_943598",
+      "reference": "TXN-UNGB-FINAL-035000",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "type": "transfer",
+      "senderOrRecipient": "Bank Clearing Escrow",
+      "bankName": "Global International Trust Bank, N.A.",
+      "accountNumber": "9820019248",
+      "amount": 500,
+      "fee": 15,
+      "total": 515,
+      "paymentMethod": "bank_transfer",
+      "paymentStatus": "confirmed",
+      "status": "completed",
+      "description": "Official Swift MT103 Federal Reserve Interbank wire voucher",
+      "isSimulated": true,
+      "receiptImages": [
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
+      ],
+      "userMessage": "Official Swift MT103 Federal Reserve Interbank wire voucher",
+      "createdAt": "2026-11-06T19:57:15.004Z",
+      "updatedAt": "2026-11-06T19:57:15.020Z",
+      "paymentSubmittedAt": "2026-11-06T19:57:15.004Z",
+      "reviewCompletedAt": "2026-11-06T19:57:15.020Z",
+      "adminNote": "Confirmed via Federal Reserve Bank clearing queue."
+    },
+    {
+      "id": "txn_1793961638223_51f652",
+      "reference": "TXN-UNGB-AUDIT-WIRE-01",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "type": "transfer",
+      "senderOrRecipient": "Bank Clearing Escrow",
+      "bankName": "Global International Trust Bank, N.A.",
+      "accountNumber": "9820019248",
+      "amount": 250,
+      "fee": 15,
+      "total": 265,
+      "paymentMethod": "bank_transfer",
+      "paymentStatus": "confirmed",
+      "status": "completed",
+      "description": "Official Federal Reserve clearing receipt wire verification TXN-UNGB-AUDIT-WIRE-01",
+      "isSimulated": true,
+      "receiptImages": [
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
+      ],
+      "userMessage": "Official Federal Reserve clearing receipt wire verification TXN-UNGB-AUDIT-WIRE-01",
+      "createdAt": "2026-11-06T10:40:38.223Z",
+      "updatedAt": "2026-11-06T10:40:38.230Z",
+      "paymentSubmittedAt": "2026-11-06T10:40:38.223Z",
+      "reviewCompletedAt": "2026-11-06T10:40:38.230Z",
+      "adminNote": "Interbank wire confirmed with central reserve clearing desk."
+    },
+    {
+      "id": "txn_1793960716272_3e0e26",
+      "reference": "TXN-UNGB-TEST-BTC-02",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "type": "withdrawal",
+      "senderOrRecipient": "Bitcoin Institutional Custody",
+      "bankName": "Bitcoin Network",
+      "accountNumber": "bc1qgoldchase92849un021948xkp9",
+      "amount": 300,
+      "fee": 15,
+      "total": 315,
+      "paymentMethod": "bitcoin",
+      "paymentStatus": "rejected",
+      "status": "failed",
+      "description": "Bitcoin payment txid: 7a92c810fe9182bc819283748291028374829102834729102938475629102938",
+      "isSimulated": true,
+      "receiptImages": [
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+      ],
+      "userMessage": "Bitcoin payment txid: 7a92c810fe9182bc819283748291028374829102834729102938475629102938",
+      "createdAt": "2026-11-06T10:25:16.272Z",
+      "updatedAt": "2026-11-06T10:25:42.536Z",
+      "paymentSubmittedAt": "2026-11-06T10:25:42.507Z",
+      "reviewCompletedAt": "2026-11-06T10:25:42.536Z",
+      "adminNote": "Transaction hash could not be confirmed on Bitcoin Native SegWit mainnet. Please resubmit valid proof."
+    },
+    {
+      "id": "txn_1793960716266_9e993e",
+      "reference": "TXN-UNGB-TEST-WIRE-01",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "type": "transfer",
+      "senderOrRecipient": "Bank Clearing Escrow",
+      "bankName": "Global International Trust Bank, N.A.",
+      "accountNumber": "9820019248",
+      "amount": 150,
+      "fee": 15,
+      "total": 165,
+      "paymentMethod": "bank_transfer",
+      "paymentStatus": "confirmed",
+      "status": "completed",
+      "description": "Settlement fee remittance wire for international transfer reference TXN-UNGB-TEST-WIRE-01",
+      "isSimulated": true,
+      "receiptImages": [
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
+      ],
+      "userMessage": "Settlement fee remittance wire for international transfer reference TXN-UNGB-TEST-WIRE-01",
+      "createdAt": "2026-11-06T10:25:16.266Z",
+      "updatedAt": "2026-11-06T10:25:42.526Z",
+      "paymentSubmittedAt": "2026-11-06T10:25:42.495Z",
+      "reviewCompletedAt": "2026-11-06T10:25:42.526Z",
+      "adminNote": "Wire cleared and confirmed with Global International Trust Bank clearing desk."
+    },
+    {
+      "id": "txn_init_01",
+      "reference": "TXN-UNGB-202610-A109",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "type": "admin_credit",
+      "senderOrRecipient": "United Nation Gold Chase Reserve",
+      "bankName": "United Nation Gold Chase Bank",
+      "accountNumber": "UNGB-TREASURY-01",
+      "amount": 25000,
+      "fee": 0,
+      "total": 25000,
+      "paymentMethod": "internal",
+      "paymentStatus": "confirmed",
+      "status": "completed",
+      "description": "Initial Prototype Wallet Credit — Treasury Allocation",
+      "adminNote": "Authorized system onboarding demonstration credit",
+      "isSimulated": true,
+      "createdAt": "2026-10-18T11:19:59.676Z",
+      "updatedAt": "2026-10-18T11:19:59.676Z"
+    },
+    {
+      "id": "txn_init_02",
+      "reference": "TXN-UNGB-202610-B421",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "type": "transfer",
+      "senderOrRecipient": "Elena Rostova",
+      "bankName": "UBS Wealth Zurich",
+      "accountNumber": "CH93-0024-8812-9912",
+      "routingOrSwift": "UBSWCHZZ80A",
+      "amount": 150,
+      "fee": 15,
+      "total": 165,
+      "paymentMethod": "bank_transfer",
+      "paymentStatus": "confirmed",
+      "status": "completed",
+      "description": "Consulting honorarium test remittance",
+      "adminNote": "Wire clearing verified by clearing officer",
+      "isSimulated": true,
+      "createdAt": "2026-10-25T11:19:59.676Z",
+      "updatedAt": "2026-10-26T11:19:59.676Z",
+      "paymentSubmittedAt": "2026-10-25T11:19:59.676Z",
+      "reviewCompletedAt": "2026-10-26T11:19:59.676Z"
+    }
+  ],
+  "feeSettings": {
+    "transferFee": 15,
+    "withdrawalFee": 25,
+    "minTransferAmount": 10,
+    "maxTransferAmount": 500000,
+    "currency": "USD",
+    "updatedAt": "2026-10-28T11:19:59.676Z",
+    "updatedBy": "un.department.retirement.unjspf@gmail.com",
+    "transferFixedFee": 15,
+    "transferPercentFee": 0,
+    "transferFeeEnabled": true,
+    "withdrawalFixedFee": 25,
+    "withdrawalPercentFee": 0,
+    "withdrawalFeeEnabled": true
+  },
+  "paymentMethods": [
+    {
+      "id": "bitcoin",
+      "name": "Bitcoin Network (BTC)",
+      "enabled": true,
+      "fee": 15,
+      "instructions": "Send the exact fee amount to our authorized institutional verification address: bc1qgoldchase92849un021948xkp9. Transfers are verified on the blockchain within 15–60 minutes. Enter your transaction hash below.",
+      "accountDetails": {
+        "btcAddress": "bc1qgoldchase92849un021948xkp9",
+        "network": "Bitcoin Native SegWit (Mainnet)"
+      }
+    },
+    {
+      "id": "bank_transfer",
+      "name": "Direct Bank Wire / ACH Transfer",
+      "enabled": true,
+      "fee": 15,
+      "instructions": "Wire or ACH the verification fee to our escrow clearing reserve. Quote your Transaction Reference in the wire payment memo.",
+      "accountDetails": {
+        "beneficiary": "United Nation Gold Chase Clearing Escrow LLC",
+        "bankName": "Global International Trust Bank, N.A.",
+        "routingNumber": "021000021",
+        "accountNumber": "9820019248",
+        "swiftBic": "GITBUS33NYC"
+      }
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_1794137972250_9b7f9d",
+      "userId": "user_demo_01",
+      "title": "Account Debited — $50.00 USD",
+      "message": "A debit transaction of $50.00 USD has been successfully recorded in your account. Reference: ADJ-UNGB-261108-0D1733. Previous balance: $24900.00 USD, New balance: $24850.00 USD. Date: 11/8/2026, 11:39:32 AM. Reason: Reverting audit test credit to preserve authentic balance.",
+      "type": "debit",
+      "read": false,
+      "createdAt": "2026-11-08T11:39:32.250Z"
+    },
+    {
+      "id": "notif_1794137972241_66dd86",
+      "userId": "user_demo_01",
+      "title": "Account Credited — $50.00 USD",
+      "message": "A credit transaction of $50.00 USD has been successfully recorded in your account. Reference: ADJ-UNGB-261108-BA80F5. Previous balance: $24850.00 USD, New balance: $24900.00 USD. Date: 11/8/2026, 11:39:32 AM. Reason: Audit test credit verification.",
+      "type": "credit",
+      "read": false,
+      "createdAt": "2026-11-08T11:39:32.241Z"
+    },
+    {
+      "id": "notif_1794045257577_cb0d99",
+      "userId": "user_demo_01",
+      "title": "Account Debited — $100.00 USD",
+      "message": "A debit transaction of $100.00 USD has been successfully recorded in your account. Reference: ADJ-UNGB-261107-FD9D00. Previous balance: $24950.00 USD, New balance: $24850.00 USD. Date: 11/7/2026, 9:54:17 AM. Reason: Reverting audit test credit to preserve authentic balance.",
+      "type": "debit",
+      "read": false,
+      "createdAt": "2026-11-07T09:54:17.577Z"
+    },
+    {
+      "id": "notif_1794045257570_fdd7a6",
+      "userId": "user_demo_01",
+      "title": "Account Credited — $100.00 USD",
+      "message": "A credit transaction of $100.00 USD has been successfully recorded in your account. Reference: ADJ-UNGB-261107-D25187. Previous balance: $24850.00 USD, New balance: $24950.00 USD. Date: 11/7/2026, 9:54:17 AM. Reason: Institutional pension credit verification audit.",
+      "type": "credit",
+      "read": false,
+      "createdAt": "2026-11-07T09:54:17.570Z"
+    },
+    {
+      "id": "notif_1794044604819_b08c1f",
+      "userId": "i5I2bIHmnrY60U6JQ9HKnjZDW442",
+      "title": "Account Credited — $10000000.00 USD",
+      "message": "A credit transaction of $10000000.00 USD has been successfully recorded in your account. Reference: ADJ-UNGB-261107-FABD6A. Previous balance: $0.00 USD, New balance: $10000000.00 USD. Date: 11/7/2026, 9:43:24 AM. Reason: retirement founds.",
+      "type": "credit",
+      "read": true,
+      "createdAt": "2026-11-07T09:43:24.819Z"
+    },
+    {
+      "id": "notif_1793995035020_94e167",
+      "userId": "user_demo_01",
+      "title": "Payment Verified",
+      "message": "Your Bank Transfer payment (Ref: TXN-UNGB-FINAL-035000) for $500.00 USD has been independently verified and confirmed by the institutional clearing desk.",
+      "type": "payment",
+      "read": false,
+      "createdAt": "2026-11-06T19:57:15.020Z",
+      "reference": "TXN-UNGB-FINAL-035000",
+      "amount": 500
+    },
+    {
+      "id": "notif_1793995035005_ab86cf",
+      "userId": "user_demo_01",
+      "title": "Payment Submitted for Verification",
+      "message": "Your Bank Transfer payment details have been submitted successfully. Your payment is awaiting confirmation. Reference: TXN-UNGB-FINAL-035000.",
+      "type": "payment",
+      "read": false,
+      "createdAt": "2026-11-06T19:57:15.005Z",
+      "reference": "TXN-UNGB-FINAL-035000",
+      "amount": 500
+    },
+    {
+      "id": "notif_1793961638230_11164c",
+      "userId": "user_demo_01",
+      "title": "Payment Verified",
+      "message": "Your Bank Transfer payment (Ref: TXN-UNGB-AUDIT-WIRE-01) for $250.00 USD has been independently verified and confirmed by the institutional clearing desk.",
+      "type": "payment",
+      "read": false,
+      "createdAt": "2026-11-06T10:40:38.230Z",
+      "reference": "TXN-UNGB-AUDIT-WIRE-01",
+      "amount": 250
+    },
+    {
+      "id": "notif_1793961638223_011556",
+      "userId": "user_demo_01",
+      "title": "Payment Submitted for Verification",
+      "message": "Your Bank Transfer payment details have been submitted successfully. Your payment is awaiting confirmation. Reference: TXN-UNGB-AUDIT-WIRE-01.",
+      "type": "payment",
+      "read": false,
+      "createdAt": "2026-11-06T10:40:38.223Z",
+      "reference": "TXN-UNGB-AUDIT-WIRE-01",
+      "amount": 250
+    },
+    {
+      "id": "notif_1793960742536_74ec93",
+      "userId": "user_demo_01",
+      "title": "Payment Rejected",
+      "message": "Your Bitcoin payment submission (Ref: TXN-UNGB-TEST-BTC-02) was reviewed and could not be verified. Reason: Transaction hash could not be confirmed on Bitcoin Native SegWit mainnet. Please resubmit valid proof..",
+      "type": "payment",
+      "read": false,
+      "createdAt": "2026-11-06T10:25:42.536Z",
+      "reference": "TXN-UNGB-TEST-BTC-02",
+      "amount": 300
+    },
+    {
+      "id": "notif_1793960742526_7ac734",
+      "userId": "user_demo_01",
+      "title": "Payment Verified",
+      "message": "Your Bank Transfer payment (Ref: TXN-UNGB-TEST-WIRE-01) for $150.00 USD has been independently verified and confirmed by the institutional clearing desk.",
+      "type": "payment",
+      "read": false,
+      "createdAt": "2026-11-06T10:25:42.526Z",
+      "reference": "TXN-UNGB-TEST-WIRE-01",
+      "amount": 150
+    },
+    {
+      "id": "notif_1793960742507_a161d6",
+      "userId": "user_demo_01",
+      "title": "Payment Submitted for Verification",
+      "message": "Your Bitcoin payment details have been submitted successfully. Your payment is awaiting confirmation. Reference: TXN-UNGB-TEST-BTC-02.",
+      "type": "payment",
+      "read": false,
+      "createdAt": "2026-11-06T10:25:42.507Z",
+      "reference": "TXN-UNGB-TEST-BTC-02",
+      "amount": 300
+    },
+    {
+      "id": "notif_1793960742495_06af3c",
+      "userId": "user_demo_01",
+      "title": "Payment Submitted for Verification",
+      "message": "Your Bank Transfer payment details have been submitted successfully. Your payment is awaiting confirmation. Reference: TXN-UNGB-TEST-WIRE-01.",
+      "type": "payment",
+      "read": false,
+      "createdAt": "2026-11-06T10:25:42.495Z",
+      "reference": "TXN-UNGB-TEST-WIRE-01",
+      "amount": 150
+    },
+    {
+      "id": "notif_1793960716289_a9eec4",
+      "userId": "user_demo_01",
+      "title": "Payment Rejected",
+      "message": "Your Bitcoin payment submission (Ref: TXN-UNGB-TEST-BTC-02) was reviewed and could not be verified. Reason: Transaction hash could not be confirmed on Bitcoin Native SegWit mainnet. Please resubmit valid proof..",
+      "type": "payment",
+      "read": false,
+      "createdAt": "2026-11-06T10:25:16.289Z",
+      "reference": "TXN-UNGB-TEST-BTC-02",
+      "amount": 300
+    },
+    {
+      "id": "notif_1793960716285_4ba9e9",
+      "userId": "user_demo_01",
+      "title": "Payment Verified",
+      "message": "Your Bank Transfer payment (Ref: TXN-UNGB-TEST-WIRE-01) for $150.00 USD has been independently verified and confirmed by the institutional clearing desk.",
+      "type": "payment",
+      "read": false,
+      "createdAt": "2026-11-06T10:25:16.285Z",
+      "reference": "TXN-UNGB-TEST-WIRE-01",
+      "amount": 150
+    },
+    {
+      "id": "notif_1793960716272_98dce3",
+      "userId": "user_demo_01",
+      "title": "Payment Submitted for Verification",
+      "message": "Your Bitcoin payment details have been submitted successfully. Your payment is awaiting confirmation. Reference: TXN-UNGB-TEST-BTC-02.",
+      "type": "payment",
+      "read": false,
+      "createdAt": "2026-11-06T10:25:16.272Z",
+      "reference": "TXN-UNGB-TEST-BTC-02",
+      "amount": 300
+    },
+    {
+      "id": "notif_1793960716266_97c63f",
+      "userId": "user_demo_01",
+      "title": "Payment Submitted for Verification",
+      "message": "Your Bank Transfer payment details have been submitted successfully. Your payment is awaiting confirmation. Reference: TXN-UNGB-TEST-WIRE-01.",
+      "type": "payment",
+      "read": false,
+      "createdAt": "2026-11-06T10:25:16.266Z",
+      "reference": "TXN-UNGB-TEST-WIRE-01",
+      "amount": 150
+    },
+    {
+      "id": "notif_1793814413241_bf510c",
+      "userId": "uid_kamsi_permanent_001",
+      "title": "Welcome to United Nation Gold Chase Bank",
+      "message": "Your digital wallet UNGB-5092-9435-1565-7107 has been activated.",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-11-04T17:46:53.241Z"
+    },
+    {
+      "id": "notif_1793814272423_2f8d49",
+      "userId": "user_1793814272423_e863c3",
+      "title": "Welcome to United Nation Gold Chase Bank",
+      "message": "Your digital wallet UNGB-4292-3880-8754-7599 has been activated.",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-11-04T17:44:32.424Z"
+    },
+    {
+      "id": "notif_1793724186169_849edd",
+      "userId": "user_1793724186168_9b25c2",
+      "title": "Welcome to United Nation Gold Chase Bank",
+      "message": "Your digital wallet UNGB-2035-5104-8391-7189 has been activated.",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-11-03T16:43:06.169Z"
+    },
+    {
+      "id": "notif_1793705943827_89c289",
+      "userId": "user_1793705943827_a7e9fd",
+      "title": "Welcome to United Nation Gold Chase Bank",
+      "message": "Your digital wallet UNGB-8829-3167-1505-8114 has been activated.",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-11-03T11:39:03.827Z"
+    },
+    {
+      "id": "notif_1793452661182_dbdcad",
+      "userId": "user_1793452661182_4fcd26",
+      "title": "Welcome to United Nation Gold Chase Bank",
+      "message": "Your digital wallet UNGB-5667-9897-6099-2396 has been activated.",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-10-31T13:17:41.182Z"
+    },
+    {
+      "id": "notif_1793355445761_5f1de9",
+      "userId": "user_1793355445761_9f233b",
+      "title": "Welcome to United Nation Gold Chase Bank",
+      "message": "Your digital wallet UNGB-4147-6899-3628-1916 has been activated.",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-10-30T10:17:25.762Z"
+    },
+    {
+      "id": "notif_1793270255145_635484",
+      "userId": "user_1793270255069_ea3621",
+      "title": "Welcome to United Nation Gold Chase Bank",
+      "message": "Your digital wallet UNGB-7426-6877-6903-2854 has been activated with $10,000 in simulated prototype funds.",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-10-29T10:37:35.145Z"
+    },
+    {
+      "id": "notif_init_01",
+      "userId": "user_demo_01",
+      "title": "Welcome to United Nation Gold Chase Bank",
+      "message": "Your high-security digital wallet has been provisioned. Note: This prototype utilizes simulated funds for institutional testing.",
+      "type": "system",
+      "read": false,
+      "createdAt": "2026-10-18T11:19:59.676Z"
+    },
+    {
+      "id": "notif_init_02",
+      "userId": "user_demo_01",
+      "title": "Transfer Verification Completed",
+      "message": "Your remittance reference TXN-UNGB-202610-B421 of $150.00 to Elena Rostova has been confirmed.",
+      "type": "payment",
+      "read": false,
+      "createdAt": "2026-10-26T11:19:59.676Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "audit_1794137972251_c6d87f",
+      "timestamp": "2026-11-08T11:39:32.251Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "BALANCE_DEBIT",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "ADJ-UNGB-261108-0D1733",
+      "previousValue": "$24900.00",
+      "newValue": "$24850.00",
+      "reason": "Reverting audit test credit to preserve authentic balance"
+    },
+    {
+      "id": "audit_1794137972242_6808a4",
+      "timestamp": "2026-11-08T11:39:32.242Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "BALANCE_CREDIT",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "ADJ-UNGB-261108-BA80F5",
+      "previousValue": "$24850.00",
+      "newValue": "$24900.00",
+      "reason": "Audit test credit verification"
+    },
+    {
+      "id": "audit_1794137972136_614116",
+      "timestamp": "2026-11-08T11:39:32.136Z",
+      "actorEmail": "random.attacker@gmail.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_LOGIN_ATTEMPT",
+      "reason": "Unauthorized email address tried to access administrator sign-in. Authorized Gmail required: un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1794137972127_67c720",
+      "timestamp": "2026-11-08T11:39:32.127Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1794137936083_70bdb3",
+      "timestamp": "2026-11-08T11:38:56.083Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_FAILED",
+      "reason": "Incorrect administrator password attempt"
+    },
+    {
+      "id": "audit_1794137935986_295717",
+      "timestamp": "2026-11-08T11:38:55.986Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "PASSWORD_RECOVERY_REQUESTED",
+      "reason": "Verification code generated for recovery. Single-use, expires in 15 minutes."
+    },
+    {
+      "id": "audit_1794137915219_1661e0",
+      "timestamp": "2026-11-08T11:38:35.219Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_FAILED",
+      "reason": "Incorrect administrator password attempt"
+    },
+    {
+      "id": "audit_1794137324987_6460ee",
+      "timestamp": "2026-11-08T11:28:44.987Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_ACCOUNT_PROVISIONED",
+      "reason": "Administrator account successfully registered and activated for un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1794137300460_2fbc72",
+      "timestamp": "2026-11-08T11:28:20.460Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_FAILED",
+      "reason": "Incorrect administrator password attempt"
+    },
+    {
+      "id": "audit_1794045257577_64c8f6",
+      "timestamp": "2026-11-07T09:54:17.577Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "BALANCE_DEBIT",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "ADJ-UNGB-261107-FD9D00",
+      "previousValue": "$24950.00",
+      "newValue": "$24850.00",
+      "reason": "Reverting audit test credit to preserve authentic balance"
+    },
+    {
+      "id": "audit_1794045257570_351c9a",
+      "timestamp": "2026-11-07T09:54:17.570Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "BALANCE_CREDIT",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "ADJ-UNGB-261107-D25187",
+      "previousValue": "$24850.00",
+      "newValue": "$24950.00",
+      "reason": "Institutional pension credit verification audit"
+    },
+    {
+      "id": "audit_1794045257395_2f8daf",
+      "timestamp": "2026-11-07T09:54:17.395Z",
+      "actorEmail": "unauthorized.person@gmail.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_LOGIN_ATTEMPT",
+      "reason": "Unauthorized email address tried to access administrator sign-in. Authorized Gmail required: un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1794045257382_a8a836",
+      "timestamp": "2026-11-07T09:54:17.382Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1794045245082_721f46",
+      "timestamp": "2026-11-07T09:54:05.082Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_FAILED",
+      "reason": "Incorrect administrator password attempt"
+    },
+    {
+      "id": "audit_1794045240556_6a9ee3",
+      "timestamp": "2026-11-07T09:54:00.556Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_FAILED",
+      "reason": "Incorrect administrator password attempt"
+    },
+    {
+      "id": "audit_1794044604820_4418c4",
+      "timestamp": "2026-11-07T09:43:24.820Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "BALANCE_CREDIT",
+      "targetUserId": "i5I2bIHmnrY60U6JQ9HKnjZDW442",
+      "targetUserEmail": "kamsikamsi392@gmail.com",
+      "reference": "ADJ-UNGB-261107-FABD6A",
+      "previousValue": "$0.00",
+      "newValue": "$10000000.00",
+      "reason": "retirement founds"
+    },
+    {
+      "id": "audit_1794044546356_848d4e",
+      "timestamp": "2026-11-07T09:42:26.356Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_ACCOUNT_PROVISIONED",
+      "reason": "Administrator account successfully registered and activated for un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1794042695829_46294e",
+      "timestamp": "2026-11-07T09:11:35.829Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1793995035020_da0b89",
+      "timestamp": "2026-11-06T19:57:15.020Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "PAYMENT_SUBMISSION_VERIFIED",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "TXN-UNGB-FINAL-035000",
+      "previousValue": "pending",
+      "newValue": "verified",
+      "reason": "Confirmed via Federal Reserve Bank clearing queue."
+    },
+    {
+      "id": "audit_1793995035006_5d2665",
+      "timestamp": "2026-11-06T19:57:15.006Z",
+      "actorEmail": "demo.client@ungoldchase.bank",
+      "actorRole": "user",
+      "action": "PAYMENT_RECEIPT_SUBMITTED",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "TXN-UNGB-FINAL-035000",
+      "newValue": "{\"paymentMethod\":\"bank_transfer\",\"amount\":500,\"imageCount\":2}",
+      "reason": "Official Swift MT103 Federal Reserve Interbank wire voucher"
+    },
+    {
+      "id": "audit_1793961638231_8c8591",
+      "timestamp": "2026-11-06T10:40:38.231Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "PAYMENT_SUBMISSION_VERIFIED",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "TXN-UNGB-AUDIT-WIRE-01",
+      "previousValue": "pending",
+      "newValue": "verified",
+      "reason": "Interbank wire confirmed with central reserve clearing desk."
+    },
+    {
+      "id": "audit_1793961638224_e39997",
+      "timestamp": "2026-11-06T10:40:38.224Z",
+      "actorEmail": "demo.client@ungoldchase.bank",
+      "actorRole": "user",
+      "action": "PAYMENT_RECEIPT_SUBMITTED",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "TXN-UNGB-AUDIT-WIRE-01",
+      "newValue": "{\"paymentMethod\":\"bank_transfer\",\"amount\":250,\"imageCount\":2}",
+      "reason": "Official Federal Reserve clearing receipt wire verification TXN-UNGB-AUDIT-WIRE-01"
+    },
+    {
+      "id": "audit_1793961376358_fe74eb",
+      "timestamp": "2026-11-06T10:36:16.358Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_FAILED",
+      "reason": "Incorrect administrator password attempt"
+    },
+    {
+      "id": "audit_1793961292755_b24983",
+      "timestamp": "2026-11-06T10:34:52.755Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_FAILED",
+      "reason": "Incorrect administrator password attempt"
+    },
+    {
+      "id": "audit_1793960742536_46ba6c",
+      "timestamp": "2026-11-06T10:25:42.536Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "PAYMENT_SUBMISSION_REJECTED",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "TXN-UNGB-TEST-BTC-02",
+      "previousValue": "pending",
+      "newValue": "rejected",
+      "reason": "Transaction hash could not be confirmed on Bitcoin Native SegWit mainnet. Please resubmit valid proof."
+    },
+    {
+      "id": "audit_1793960742527_1d1721",
+      "timestamp": "2026-11-06T10:25:42.527Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "PAYMENT_SUBMISSION_VERIFIED",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "TXN-UNGB-TEST-WIRE-01",
+      "previousValue": "pending",
+      "newValue": "verified",
+      "reason": "Wire cleared and confirmed with Global International Trust Bank clearing desk."
+    },
+    {
+      "id": "audit_1793960742508_00fcca",
+      "timestamp": "2026-11-06T10:25:42.508Z",
+      "actorEmail": "demo.client@ungoldchase.bank",
+      "actorRole": "user",
+      "action": "PAYMENT_RECEIPT_SUBMITTED",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "TXN-UNGB-TEST-BTC-02",
+      "newValue": "{\"paymentMethod\":\"bitcoin\",\"amount\":300,\"imageCount\":1}",
+      "reason": "Bitcoin payment txid: 7a92c810fe9182bc819283748291028374829102834729102938475629102938"
+    },
+    {
+      "id": "audit_1793960742496_9c2e84",
+      "timestamp": "2026-11-06T10:25:42.496Z",
+      "actorEmail": "demo.client@ungoldchase.bank",
+      "actorRole": "user",
+      "action": "PAYMENT_RECEIPT_SUBMITTED",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "TXN-UNGB-TEST-WIRE-01",
+      "newValue": "{\"paymentMethod\":\"bank_transfer\",\"amount\":150,\"imageCount\":2}",
+      "reason": "Settlement fee remittance wire for international transfer reference TXN-UNGB-TEST-WIRE-01"
+    },
+    {
+      "id": "audit_1793960716290_ebeea0",
+      "timestamp": "2026-11-06T10:25:16.290Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "PAYMENT_SUBMISSION_REJECTED",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "TXN-UNGB-TEST-BTC-02",
+      "previousValue": "pending",
+      "newValue": "rejected",
+      "reason": "Transaction hash could not be confirmed on Bitcoin Native SegWit mainnet. Please resubmit valid proof."
+    },
+    {
+      "id": "audit_1793960716285_61865f",
+      "timestamp": "2026-11-06T10:25:16.285Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "PAYMENT_SUBMISSION_VERIFIED",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "TXN-UNGB-TEST-WIRE-01",
+      "previousValue": "pending",
+      "newValue": "verified",
+      "reason": "Wire cleared and confirmed with Global International Trust Bank clearing desk."
+    },
+    {
+      "id": "audit_1793960716273_bfa77c",
+      "timestamp": "2026-11-06T10:25:16.273Z",
+      "actorEmail": "demo.client@ungoldchase.bank",
+      "actorRole": "user",
+      "action": "PAYMENT_RECEIPT_SUBMITTED",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "TXN-UNGB-TEST-BTC-02",
+      "newValue": "{\"paymentMethod\":\"bitcoin\",\"amount\":300,\"imageCount\":1}",
+      "reason": "Bitcoin payment txid: 7a92c810fe9182bc819283748291028374829102834729102938475629102938"
+    },
+    {
+      "id": "audit_1793960716267_415f71",
+      "timestamp": "2026-11-06T10:25:16.267Z",
+      "actorEmail": "demo.client@ungoldchase.bank",
+      "actorRole": "user",
+      "action": "PAYMENT_RECEIPT_SUBMITTED",
+      "targetUserId": "user_demo_01",
+      "targetUserEmail": "demo.client@ungoldchase.bank",
+      "reference": "TXN-UNGB-TEST-WIRE-01",
+      "newValue": "{\"paymentMethod\":\"bank_transfer\",\"amount\":150,\"imageCount\":2}",
+      "reason": "Settlement fee remittance wire for international transfer reference TXN-UNGB-TEST-WIRE-01"
+    },
+    {
+      "id": "audit_1793814458513_12e3ee",
+      "timestamp": "2026-11-04T17:47:38.513Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1793814450961_c69c62",
+      "timestamp": "2026-11-04T17:47:30.961Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1793814446784_766b4f",
+      "timestamp": "2026-11-04T17:47:26.784Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_ACCOUNT_PROVISIONED",
+      "reason": "Administrator account successfully registered and activated for un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1793814438654_3ab7dd",
+      "timestamp": "2026-11-04T17:47:18.654Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_FAILED",
+      "reason": "Incorrect administrator password attempt"
+    },
+    {
+      "id": "audit_1793814413242_ce62eb",
+      "timestamp": "2026-11-04T17:46:53.242Z",
+      "actorEmail": "kamsi.permanent@ungoldchase.bank",
+      "actorRole": "user",
+      "action": "USER_REGISTRATION",
+      "targetUserId": "uid_kamsi_permanent_001",
+      "targetUserEmail": "kamsi.permanent@ungoldchase.bank",
+      "reason": "New account registered with verified email and phone credentials"
+    },
+    {
+      "id": "audit_1793814391297_040db3",
+      "timestamp": "2026-11-04T17:46:31.297Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_ACCOUNT_PROVISIONED",
+      "reason": "Administrator account successfully registered and activated for un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1793814361181_eada2b",
+      "timestamp": "2026-11-04T17:46:01.181Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_FAILED",
+      "reason": "Incorrect administrator password attempt"
+    },
+    {
+      "id": "audit_1793814272424_de47cd",
+      "timestamp": "2026-11-04T17:44:32.424Z",
+      "actorEmail": "kamsikamsi392@gmail.com",
+      "actorRole": "user",
+      "action": "USER_REGISTRATION",
+      "targetUserId": "user_1793814272423_e863c3",
+      "targetUserEmail": "kamsikamsi392@gmail.com",
+      "reason": "New account registered with verified email and phone credentials"
+    },
+    {
+      "id": "audit_1793813605119_bbaf0b",
+      "timestamp": "2026-11-04T17:33:25.119Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1793813601244_b8bd9f",
+      "timestamp": "2026-11-04T17:33:21.244Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_ACCOUNT_PROVISIONED",
+      "reason": "Administrator account successfully registered and activated for un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1793813597725_2ccad3",
+      "timestamp": "2026-11-04T17:33:17.725Z",
+      "actorEmail": "test@gmail.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_LOGIN_ATTEMPT",
+      "reason": "Unauthorized email address tried to access administrator sign-in. Authorized Gmail required: un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1793813593800_95c57a",
+      "timestamp": "2026-11-04T17:33:13.800Z",
+      "actorEmail": "cchristiankamsi55@gmail.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_REGISTER_ATTEMPT",
+      "reason": "Unauthorized email address tried to register for administrator access. Authorized Gmail required: un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1793813575945_7bc416",
+      "timestamp": "2026-11-04T17:32:55.945Z",
+      "actorEmail": "cchristiankamsi55@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_FAILED",
+      "reason": "Incorrect administrator password attempt"
+    },
+    {
+      "id": "audit_1793813567741_644a31",
+      "timestamp": "2026-11-04T17:32:47.741Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_FAILED",
+      "reason": "Incorrect administrator password attempt"
+    },
+    {
+      "id": "audit_1793813544302_36bd1a",
+      "timestamp": "2026-11-04T17:32:24.302Z",
+      "actorEmail": "cchristiankamsi55@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_FAILED",
+      "reason": "Incorrect administrator password attempt"
+    },
+    {
+      "id": "audit_1793812866804_93b2cd",
+      "timestamp": "2026-11-04T17:21:06.804Z",
+      "actorEmail": "cchristiankamsi55@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1793812862804_5fb20a",
+      "timestamp": "2026-11-04T17:21:02.805Z",
+      "actorEmail": "cchristiankamsi55@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_ACCOUNT_PROVISIONED",
+      "reason": "Administrator account successfully registered and activated for cchristiankamsi55@gmail.com"
+    },
+    {
+      "id": "audit_1793812859015_a3afec",
+      "timestamp": "2026-11-04T17:20:59.015Z",
+      "actorEmail": "intruder@gmail.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_LOGIN_ATTEMPT",
+      "reason": "Unauthorized email address tried to access administrator sign-in. Authorized Gmail required: cchristiankamsi55@gmail.com"
+    },
+    {
+      "id": "audit_1793812855019_0dca8c",
+      "timestamp": "2026-11-04T17:20:55.019Z",
+      "actorEmail": "intruder@gmail.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_REGISTER_ATTEMPT",
+      "reason": "Unauthorized email address tried to register for administrator access. Authorized Gmail required: cchristiankamsi55@gmail.com"
+    },
+    {
+      "id": "audit_1793724196987_baa4d2",
+      "timestamp": "2026-11-03T16:43:16.987Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1793724186170_a403dc",
+      "timestamp": "2026-11-03T16:43:06.170Z",
+      "actorEmail": "marie.curie@gmail.com",
+      "actorRole": "user",
+      "action": "USER_REGISTRATION",
+      "targetUserId": "user_1793724186168_9b25c2",
+      "targetUserEmail": "marie.curie@gmail.com",
+      "reason": "New account registered with verified email and phone credentials"
+    },
+    {
+      "id": "audit_1793705955348_6be7fc",
+      "timestamp": "2026-11-03T11:39:15.348Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1793705943828_978acc",
+      "timestamp": "2026-11-03T11:39:03.828Z",
+      "actorEmail": "cchristiankamsi55@gmail.com",
+      "actorRole": "user",
+      "action": "USER_REGISTRATION",
+      "targetUserId": "user_1793705943827_a7e9fd",
+      "targetUserEmail": "cchristiankamsi55@gmail.com",
+      "reason": "New account registered with verified email and phone credentials"
+    },
+    {
+      "id": "audit_1793699064073_238f96",
+      "timestamp": "2026-11-03T09:44:24.074Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1793534587827_eefa40",
+      "timestamp": "2026-11-01T12:03:07.827Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1793534138093_5b39db",
+      "timestamp": "2026-11-01T11:55:38.093Z",
+      "actorEmail": "demo.client@ungoldchase.bank",
+      "actorRole": "user",
+      "action": "PASSWORD_RECOVERY_REQUESTED",
+      "reason": "Verification code generated for recovery. Single-use, expires in 15 minutes."
+    },
+    {
+      "id": "audit_1793534134825_e7a3fe",
+      "timestamp": "2026-11-01T11:55:34.825Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1793452661183_be5d6b",
+      "timestamp": "2026-10-31T13:17:41.183Z",
+      "actorEmail": "alex.chen@goldtrust.int",
+      "actorRole": "user",
+      "action": "USER_REGISTRATION",
+      "targetUserId": "user_1793452661182_4fcd26",
+      "targetUserEmail": "alex.chen@goldtrust.int",
+      "reason": "New account registered with verified email and phone credentials"
+    },
+    {
+      "id": "audit_1793452636650_7fe137",
+      "timestamp": "2026-10-31T13:17:16.651Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1793355445762_25d145",
+      "timestamp": "2026-10-30T10:17:25.762Z",
+      "actorEmail": "johndoe@example.com",
+      "actorRole": "user",
+      "action": "USER_REGISTRATION",
+      "targetUserId": "user_1793355445761_9f233b",
+      "targetUserEmail": "johndoe@example.com",
+      "reason": "New account registered with verified email and phone credentials"
+    },
+    {
+      "id": "audit_1793353586183_ccfa4b",
+      "timestamp": "2026-10-30T09:46:26.183Z",
+      "actorEmail": "demo.client@ungoldchase.bank",
+      "actorRole": "user",
+      "action": "LOGIN_FAILED",
+      "targetUserId": "user_demo_01",
+      "reason": "Incorrect password entered"
+    },
+    {
+      "id": "audit_1793270259737_be06c6",
+      "timestamp": "2026-10-29T10:37:39.738Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1793270255146_d8a540",
+      "timestamp": "2026-10-29T10:37:35.146Z",
+      "actorEmail": "victoria.sterling@prestige.org",
+      "actorRole": "user",
+      "action": "USER_REGISTRATION",
+      "targetUserId": "user_1793270255069_ea3621",
+      "targetUserEmail": "victoria.sterling@prestige.org",
+      "reason": "New account registered successfully"
+    },
+    {
+      "id": "audit_1793187178827_c09176",
+      "timestamp": "2026-10-28T11:32:58.827Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "RESET_ACCESS_GRANTED",
+      "reason": "Authorized administrator successfully passed secondary Reset verification."
+    },
+    {
+      "id": "audit_1793187174124_8861c7",
+      "timestamp": "2026-10-28T11:32:54.124Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "ADMIN_LOGIN_SUCCESS",
+      "reason": "Authorized administrator successfully signed in"
+    },
+    {
+      "id": "audit_1793187169748_4aab1d",
+      "timestamp": "2026-10-28T11:32:49.748Z",
+      "actorEmail": "hacker@evil.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_LOGIN_ATTEMPT",
+      "reason": "Unauthorized email address tried to access administrator sign-in. Required: un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_init_01",
+      "timestamp": "2026-09-28T11:19:59.676Z",
+      "actorEmail": "un.department.retirement.unjspf@gmail.com",
+      "actorRole": "admin",
+      "action": "SYSTEM_BOOTSTRAP",
+      "reason": "Initialization of United Nation Gold Chase Bank secure persistent ledger"
+    }
+  ],
+  "resetSecurity": {
+    "resetPasswordHash": "238e8a47d60f06cb16adda731f71bcc90c3ee80a3f5ef12ec4f300afbad9611c8a7c761fd8e5ce33d56357db57d95c273c698115f1ea4ed9f72e97118af3ddbe",
+    "resetSalt": "9068315baf255e49c63c1e59b03ff0e1",
+    "sessionTimeoutMinutes": 15,
+    "failedAttempts": 0,
+    "lockedUntil": null,
+    "lastPasswordChange": "2026-10-28T11:19:59.676Z"
+  },
+  "recoveryCodes": [
+    {
+      "email": "demo.client@ungoldchase.bank",
+      "code": "988670",
+      "expiresAt": "2026-11-01T12:10:38.093Z",
+      "used": false,
+      "attempts": 0
+    },
+    {
+      "email": "un.department.retirement.unjspf@gmail.com",
+      "code": "816864",
+      "expiresAt": "2026-11-08T11:53:55.986Z",
+      "used": false,
+      "attempts": 0
+    }
+  ],
+  "sessions": [
+    {
+      "token": "c88c97ea891910658262d05f218b775a510ef08fd021facd38178a8961594b86",
+      "userId": "uid_kamsi_permanent_001",
+      "role": "user",
+      "email": "kamsi.permanent@ungoldchase.bank",
+      "expiresAt": 1796406429553
+    },
+    {
+      "token": "144071d40d7725a9f4ea6f4cad9993476db94c516ba44c603c695b831e803047",
+      "userId": "uid_kamsi_permanent_001",
+      "role": "user",
+      "email": "kamsi.permanent@ungoldchase.bank",
+      "expiresAt": 1796406433716
+    },
+    {
+      "token": "f52d7c4fbe29dc8d586a38a13f7bf56d601c56467b5ec074d44dbcd17931537f",
+      "userId": "user_admin_01",
+      "role": "admin",
+      "email": "un.department.retirement.unjspf@gmail.com",
+      "expiresAt": 1796406446784
+    },
+    {
+      "token": "493d34b6d17af5f02b84ede70fc4266acb2a8258ec872f07d67a7a2e33bcb4d3",
+      "userId": "user_admin_01",
+      "role": "admin",
+      "email": "un.department.retirement.unjspf@gmail.com",
+      "expiresAt": 1796406461861
+    },
+    {
+      "token": "1048cd6f5ad5ca8cac188e9b570c9b7967d0ff8c49c21d1dbaafe39fafa358ce",
+      "userId": "user_admin_01",
+      "role": "admin",
+      "email": "un.department.retirement.unjspf@gmail.com",
+      "expiresAt": 1796552716289
+    },
+    {
+      "token": "62c4b26ec66317e93497cb8067e82e37544ff30bf64833a74cb099bf404d1127",
+      "userId": "user_demo_01",
+      "role": "user",
+      "email": "demo.client@ungoldchase.bank",
+      "expiresAt": 1796552716298
+    },
+    {
+      "token": "b1f8929a02c1799b791163f03ff8230b054936e73b937206574f1845e54b4acf",
+      "userId": "user_admin_01",
+      "role": "admin",
+      "email": "un.department.retirement.unjspf@gmail.com",
+      "expiresAt": 1796552742535
+    },
+    {
+      "token": "986f864f76c39e1d7b6a132f2028a64cd1cd780f7fee1f849bbf6024eddf4d03",
+      "userId": "user_demo_01",
+      "role": "user",
+      "email": "demo.client@ungoldchase.bank",
+      "expiresAt": 1796552742555
+    },
+    {
+      "token": "72c64bd791d38501a7672ffb2dc7cec42a8f0c6d10273444273d0b474f695e0f",
+      "userId": "i5I2bIHmnrY60U6JQ9HKnjZDW442",
+      "role": "user",
+      "email": "kamsikamsi392@gmail.com",
+      "expiresAt": 1796553480919
+    },
+    {
+      "token": "ba42db147c39d3e3264a9456b35f0cf8723d3a816422983b170f2794c7f04721",
+      "userId": "user_admin_01",
+      "role": "admin",
+      "email": "un.department.retirement.unjspf@gmail.com",
+      "expiresAt": 1796553638229
+    },
+    {
+      "token": "eeca9a4e86aee273fb63278e1062f06426f0901dc5e50239e2d27bd71f445cc1",
+      "userId": "user_demo_01",
+      "role": "user",
+      "email": "demo.client@ungoldchase.bank",
+      "expiresAt": 1796553638244
+    },
+    {
+      "token": "647acd57aea81f891dbcd4a528d1e4616766224350bccbf249546f96d0f934ee",
+      "userId": "user_admin_01",
+      "role": "admin",
+      "email": "un.department.retirement.unjspf@gmail.com",
+      "expiresAt": 1796587035018
+    },
+    {
+      "token": "b3d3da843cabb50aaa7614bc7931d35a36c9a129f65057ef341a52a303d80baf",
+      "userId": "user_demo_01",
+      "role": "user",
+      "email": "demo.client@ungoldchase.bank",
+      "expiresAt": 1796587035032
+    },
+    {
+      "token": "f86b47c99f75353e6b3392089d1a900468b3c3f8160ffeaeeb1de97ba2c610ee",
+      "userId": "user_admin_01",
+      "role": "admin",
+      "email": "un.department.retirement.unjspf@gmail.com",
+      "expiresAt": 1796634696172
+    },
+    {
+      "token": "a92fdbb230981e28cbb0f010616c3f8a444515f744d65c415e268c31f9c74538",
+      "userId": "user_demo_01",
+      "role": "user",
+      "email": "demo.client@ungoldchase.bank",
+      "expiresAt": 1796634696006
+    },
+    {
+      "token": "962013a2043a3ce5eca4b39d13f020962c9be055767a81431dac5af1d0c4b957",
+      "userId": "firebase_uid_client_8899",
+      "role": "user",
+      "email": "returning.client@gmail.com",
+      "expiresAt": 1796634696167
+    },
+    {
+      "token": "195165c68d5c4ee7de1f4082a8b047b64ba2dfec18f5d79695c204be508de37b",
+      "userId": "i5I2bIHmnrY60U6JQ9HKnjZDW442",
+      "role": "user",
+      "email": "kamsikamsi392@gmail.com",
+      "expiresAt": 1796636489336
+    },
+    {
+      "token": "797226b7af0815360f4936c45d4b50b1f52a73c8673467a6353381d55dd8ae25",
+      "userId": "i5I2bIHmnrY60U6JQ9HKnjZDW442",
+      "role": "user",
+      "email": "kamsikamsi392@gmail.com",
+      "expiresAt": 1796636768940
+    },
+    {
+      "token": "e33a70c450042faceac87ec87aaf155fb8164a200d4b5feacca024ad27713d74",
+      "userId": "i5I2bIHmnrY60U6JQ9HKnjZDW442",
+      "role": "user",
+      "email": "kamsikamsi392@gmail.com",
+      "expiresAt": 1796636769182
+    },
+    {
+      "token": "533c12fda1b6e0358b7481eb5897e1ca3f9e8a5b1c4ccfc990b02a2e6ca2711b",
+      "userId": "user_admin_01",
+      "role": "admin",
+      "email": "un.department.retirement.unjspf@gmail.com",
+      "expiresAt": 1796637257575
+    },
+    {
+      "token": "3f26aa068aa88796a88c624b8e81e5416a58e4d38da536e4dc6acbaf6c598b1c",
+      "userId": "user_demo_01",
+      "role": "user",
+      "email": "demo.client@ungoldchase.bank",
+      "expiresAt": 1796637257542
+    },
+    {
+      "token": "d3d73f1aeecf8939a80b2f252fc96bbcf4ed038bf22f17ebfe0262a92cd2e67f",
+      "userId": "i5I2bIHmnrY60U6JQ9HKnjZDW442",
+      "role": "user",
+      "email": "kamsikamsi392@gmail.com",
+      "expiresAt": 1796729242352
+    },
+    {
+      "token": "3702b91443bbf935935eade030b3a33a8ad3bb722e70316dd9919dbe17e20d3e",
+      "userId": "i5I2bIHmnrY60U6JQ9HKnjZDW442",
+      "role": "user",
+      "email": "kamsikamsi392@gmail.com",
+      "expiresAt": 1796729272358
+    },
+    {
+      "token": "11064e47a0fb5f5eec95a6f2ff3d865843abca7d5e41ddb58c8c60eff7bd42cc",
+      "userId": "i5I2bIHmnrY60U6JQ9HKnjZDW442",
+      "role": "user",
+      "email": "kamsikamsi392@gmail.com",
+      "expiresAt": 1796729272489
+    },
+    {
+      "token": "6b0a67e929d74a44c27869b2d23fe3df394cb9ee0f429c66d0c3bf92e2424d1f",
+      "userId": "user_admin_01",
+      "role": "admin",
+      "email": "un.department.retirement.unjspf@gmail.com",
+      "expiresAt": 1796729359863
+    },
+    {
+      "token": "6c8b138e18425c91b670ed8250a7247fadd872cf912e17b73ef3fdecd2d8b3f2",
+      "userId": "user_admin_01",
+      "role": "admin",
+      "email": "un.department.retirement.unjspf@gmail.com",
+      "expiresAt": 1796729972248
+    },
+    {
+      "token": "1d2b0073d7fe365df835568dda4c1ab6cc81342a1cdd5faf8035818a5e15605e",
+      "userId": "user_demo_01",
+      "role": "user",
+      "email": "demo.client@ungoldchase.bank",
+      "expiresAt": 1796729972216
+    }
+  ],
+  "paymentSubmissions": [
+    {
+      "id": "sub_1793995035005_3ed73f",
+      "transactionId": "txn_1793995035005_943598",
+      "reference": "TXN-UNGB-FINAL-035000",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "paymentMethod": "bank_transfer",
+      "amount": 500,
+      "fee": 15,
+      "total": 515,
+      "transactionType": "transfer",
+      "receiptImages": [
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
+      ],
+      "userMessage": "Official Swift MT103 Federal Reserve Interbank wire voucher",
+      "status": "verified",
+      "createdAt": "2026-11-06T19:57:15.004Z",
+      "updatedAt": "2026-11-06T19:57:15.020Z",
+      "reviewedAt": "2026-11-06T19:57:15.020Z",
+      "reviewedBy": "un.department.retirement.unjspf@gmail.com",
+      "adminNote": "Confirmed via Federal Reserve Bank clearing queue."
+    },
+    {
+      "id": "sub_1793961638223_1071d5",
+      "transactionId": "txn_1793961638223_51f652",
+      "reference": "TXN-UNGB-AUDIT-WIRE-01",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "paymentMethod": "bank_transfer",
+      "amount": 250,
+      "fee": 15,
+      "total": 265,
+      "transactionType": "transfer",
+      "receiptImages": [
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
+      ],
+      "userMessage": "Official Federal Reserve clearing receipt wire verification TXN-UNGB-AUDIT-WIRE-01",
+      "status": "verified",
+      "createdAt": "2026-11-06T10:40:38.223Z",
+      "updatedAt": "2026-11-06T10:40:38.230Z",
+      "reviewedAt": "2026-11-06T10:40:38.230Z",
+      "reviewedBy": "un.department.retirement.unjspf@gmail.com",
+      "adminNote": "Interbank wire confirmed with central reserve clearing desk."
+    },
+    {
+      "id": "sub_1793960742507_c581a1",
+      "transactionId": "txn_1793960716272_3e0e26",
+      "reference": "TXN-UNGB-TEST-BTC-02",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "paymentMethod": "bitcoin",
+      "amount": 300,
+      "fee": 15,
+      "total": 315,
+      "transactionType": "withdrawal",
+      "receiptImages": [
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+      ],
+      "userMessage": "Bitcoin payment txid: 7a92c810fe9182bc819283748291028374829102834729102938475629102938",
+      "status": "rejected",
+      "createdAt": "2026-11-06T10:25:42.507Z",
+      "updatedAt": "2026-11-06T10:25:42.536Z",
+      "reviewedAt": "2026-11-06T10:25:42.536Z",
+      "reviewedBy": "un.department.retirement.unjspf@gmail.com",
+      "adminNote": "Transaction hash could not be confirmed on Bitcoin Native SegWit mainnet. Please resubmit valid proof."
+    },
+    {
+      "id": "sub_1793960742495_731342",
+      "transactionId": "txn_1793960716266_9e993e",
+      "reference": "TXN-UNGB-TEST-WIRE-01",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "paymentMethod": "bank_transfer",
+      "amount": 150,
+      "fee": 15,
+      "total": 165,
+      "transactionType": "transfer",
+      "receiptImages": [
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
+      ],
+      "userMessage": "Settlement fee remittance wire for international transfer reference TXN-UNGB-TEST-WIRE-01",
+      "status": "verified",
+      "createdAt": "2026-11-06T10:25:42.495Z",
+      "updatedAt": "2026-11-06T10:25:42.526Z",
+      "reviewedAt": "2026-11-06T10:25:42.526Z",
+      "reviewedBy": "un.department.retirement.unjspf@gmail.com",
+      "adminNote": "Wire cleared and confirmed with Global International Trust Bank clearing desk."
+    },
+    {
+      "id": "sub_1793960716272_2981aa",
+      "transactionId": "txn_1793960716272_3e0e26",
+      "reference": "TXN-UNGB-TEST-BTC-02",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "paymentMethod": "bitcoin",
+      "amount": 300,
+      "fee": 15,
+      "total": 315,
+      "transactionType": "withdrawal",
+      "receiptImages": [
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+      ],
+      "userMessage": "Bitcoin payment txid: 7a92c810fe9182bc819283748291028374829102834729102938475629102938",
+      "status": "rejected",
+      "createdAt": "2026-11-06T10:25:16.272Z",
+      "updatedAt": "2026-11-06T10:25:16.289Z",
+      "reviewedAt": "2026-11-06T10:25:16.289Z",
+      "reviewedBy": "un.department.retirement.unjspf@gmail.com",
+      "adminNote": "Transaction hash could not be confirmed on Bitcoin Native SegWit mainnet. Please resubmit valid proof."
+    },
+    {
+      "id": "sub_1793960716266_ce274f",
+      "transactionId": "txn_1793960716266_9e993e",
+      "reference": "TXN-UNGB-TEST-WIRE-01",
+      "userId": "user_demo_01",
+      "userEmail": "demo.client@ungoldchase.bank",
+      "userName": "Kamsi Christian",
+      "paymentMethod": "bank_transfer",
+      "amount": 150,
+      "fee": 15,
+      "total": 165,
+      "transactionType": "transfer",
+      "receiptImages": [
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==",
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
+      ],
+      "userMessage": "Settlement fee remittance wire for international transfer reference TXN-UNGB-TEST-WIRE-01",
+      "status": "verified",
+      "createdAt": "2026-11-06T10:25:16.266Z",
+      "updatedAt": "2026-11-06T10:25:16.284Z",
+      "reviewedAt": "2026-11-06T10:25:16.284Z",
+      "reviewedBy": "un.department.retirement.unjspf@gmail.com",
+      "adminNote": "Wire cleared and confirmed with Global International Trust Bank clearing desk."
+    }
+  ]
+}

@@ -1,0 +1,632 @@
+PROJECT NAME: UNITED NATION GOLD CHASE BANK
+
+PROJECT TYPE
+
+Online banking-style digital wallet with a website and mobile application.
+
+OBJECTIVE
+
+Build a professional, modern digital wallet called UNITED NATION GOLD CHASE BANK. The project must include a fully functional website and mobile application, supported by a shared backend and persistent database.
+
+The website must be accessible through a public web address. The mobile application must be designed for Android, iOS, and laptop use.
+
+The application should have a professional banking appearance, using navy blue, white, and elegant gold as its primary colors.
+
+The project name is the name selected for this independent application. Do not claim that the application is owned, operated, endorsed, or officially affiliated with the United Nations, UNJSPF, or Chase Bank.
+
+IMPORTANT: The initial version will be a wallet prototype. Design the backend so legitimate payment services can be integrated in the future.
+
+1. BRANDING AND DESIGN
+
+Application name: UNITED NATION GOLD CHASE BANK.
+
+Use:
+
+* Navy blue as the primary color.
+* White as the background color.
+* Gold as the accent color.
+* A professional original gold bank logo.
+* Modern typography.
+* Rounded cards and buttons.
+* Clean financial dashboards.
+* Responsive layouts.
+* Smooth navigation and animations.
+
+The website and mobile app should share the same branding and design language.
+
+2. WEBSITE
+
+Build a responsive website that works on:
+
+* Windows laptops.
+* Mac computers.
+* Android phones.
+* iPhones.
+* Tablets.
+* Modern web browsers.
+
+Include these pages:
+
+* Home page.
+* Login.
+* Registration.
+* Dashboard.
+* Transfer.
+* Withdrawal.
+* Transaction history.
+* Transaction details.
+* Notifications.
+* Profile.
+* Reset settings for administrators.
+
+Provide a professional public landing page with UNITED NATION GOLD CHASE BANK branding, a login button, a registration button, an explanation of the wallet’s features, and a clear indication that this is an independent wallet application.
+
+After login, users should see their own dashboard.
+
+3. MOBILE APPLICATION
+
+Build a mobile application for Android, iOS, and laptop use.
+
+The mobile application must include:
+
+* Secure registration and login.
+* Wallet dashboard.
+* Available balance.
+* Transfer screen.
+* Withdrawal screen.
+* Transaction history.
+* Notifications.
+* Profile settings.
+* Secure logout.
+
+Use mobile-friendly navigation and layouts.
+
+Where practical, share application logic and UI components between the web and mobile projects.
+
+If the website and mobile app use separate frontend frameworks, they must connect to the same backend APIs and database.
+
+4. USER ACCOUNTS
+
+Implement:
+
+* User registration.
+* Secure login.
+* Password hashing.
+* Account recovery.
+* Session management.
+* User profiles.
+* Role-based access control.
+
+Users must only be able to access their own account records.
+
+5. DASHBOARD
+
+Display:
+
+* UNITED NATION GOLD CHASE BANK logo.
+* User’s full name.
+* Prototype account number.
+* Wallet balance in USD.
+* A clear distinction between simulated prototype balances and actual funds.
+* Transfer button.
+* Withdrawal button.
+* Transaction history button.
+* Recent transactions.
+* Notifications.
+
+Show the funds available in the wallet, with accurate balance calculations and persistent database records.
+
+6. TRANSFER
+
+Create a transfer form with:
+
+* Recipient’s full name.
+* Recipient’s bank name.
+* Recipient’s account number.
+* Amount in USD.
+* Optional description.
+
+Validate all fields.
+
+Show the transfer amount, applicable fee, and total before confirmation.
+
+Generate a transaction reference and save the transaction in the database.
+
+Display a modal/dialog whenever a user attempts to make a transfer that has an applicable fee. The dialog must show:
+
+* Transfer amount.
+* Applicable fee.
+* Total amount.
+* Available payment methods.
+* Payment status.
+* Continue and Cancel buttons.
+
+Transactions must not be marked as completed until all applicable requirements have been satisfied and any required payment has been verified through a legitimate payment provider.
+
+For prototype transactions, clearly identify simulated transactions and do not represent them as actual transfers between banks.
+
+7. WITHDRAWAL
+
+Create a withdrawal page containing:
+
+* Withdrawal amount.
+* Destination bank.
+* Account holder’s full name.
+* Account number.
+* Applicable withdrawal fee.
+* Total amount.
+
+Allow users to review the details before confirming.
+
+Display a modal/dialog whenever a user attempts a withdrawal that has an applicable fee. Show the fee amount and available payment methods before the transaction is submitted.
+
+Display fees transparently and provide clear payment instructions.
+
+Transactions must not be marked as completed until required verification has taken place. Prototype withdrawals must be clearly identified as simulated and must not falsely imply that money has been transferred to an external bank account.
+
+8. TRANSACTION HISTORY
+
+Record:
+
+* Transaction reference.
+* Transaction type.
+* Date and time.
+* Sender or recipient.
+* Amount.
+* Fee.
+* Status.
+* Description.
+
+Provide transaction search, filtering, and transaction details.
+
+Store transaction records persistently and ensure that users can view their own transaction history after refreshing, logging out, or signing in on another device.
+
+9. ADMINISTRATOR SETTINGS
+
+Create an administrator-only section named Reset.
+
+BALANCE MANAGEMENT
+
+* View the current balance.
+* Enter a balance amount for an authorized adjustment.
+* Save the new balance.
+* Record changes in an audit log.
+* Change the transfer fee displayed in the transaction dialog.
+* Change the withdrawal fee displayed in the withdrawal dialog.
+
+FEE MANAGEMENT
+
+* Configure the withdrawal fee.
+* Configure the transfer fee.
+* Support fixed fees in USD.
+* Display the configured fee before transaction confirmation.
+* Validate fee values on the backend.
+
+TRANSACTION MANAGEMENT
+
+* View all transactions.
+* Search and filter records.
+* Reset demonstration transactions with confirmation.
+
+SECURITY
+
+* Require administrator authentication.
+* Enforce authorization on the backend.
+* Validate all submitted values.
+* Record administrative changes.
+
+Administrator balance adjustments must create corresponding ledger entries and audit records. Do not silently overwrite financial history. Simulated balances must remain distinguishable from actual funds.
+
+10. BACKEND AND DATABASE
+
+Build a persistent backend shared by the website and mobile application.
+
+Create database models for:
+
+* Users.
+* Wallets.
+* Transactions.
+* Fee settings.
+* Notifications.
+* Administrative audit logs.
+
+Use precise monetary calculations and database transactions to prevent inconsistent balances.
+
+Changes made through the Reset page must appear consistently on the website and mobile app after refreshing or signing in again.
+
+11. SECURITY
+
+Implement:
+
+* Secure authentication.
+* Server-side validation.
+* Role-based access control.
+* Protected APIs.
+* Secure session handling.
+* Rate limiting.
+* Appropriate error handling.
+* Environment variables for secrets.
+* Audit logging.
+
+Never expose passwords, secret keys, or administrator credentials in frontend code.
+
+12. DEPLOYMENT
+
+Deploy the website to a public HTTPS address.
+
+Deploy the backend and database using suitable hosted services.
+
+Prepare the mobile application for Android, iOS, and laptop distribution.
+
+Provide instructions for:
+
+* Publishing the website.
+* Configuring the backend.
+* Connecting the database.
+* Building the Android application.
+* Building the iOS application.
+* Building the laptop application.
+* Testing on physical devices.
+* Updating the application after deployment.
+
+Use one shared backend so users see consistent account records across devices.
+
+Clearly identify any hosting, database, or app-store requirements that need separate accounts or payment.
+
+13. FINAL REQUIREMENTS
+
+Build a working project rather than a static mockup.
+
+Implement and test:
+
+* Authentication.
+* Navigation.
+* Transfers.
+* Withdrawals.
+* Transaction history.
+* Administrator settings.
+* Database persistence.
+* Fee configuration.
+* Notifications.
+* Payment status management.
+* Country and language selection.
+
+Clearly explain which features work and which require additional payment-provider integration.
+
+Do not claim a feature is functional unless it has actually been implemented and tested.
+
+14. PAYMENT METHODS AND FEE DIALOG
+
+Add a payment-method selection screen to the wallet application.
+
+Whenever a user attempts a transfer or withdrawal that has an applicable fee, display a dialog showing the fee amount and these two payment-method options:
+
+1. Bitcoin.
+2. Bank Transfer.
+
+Do not include Steam gift cards, other gift cards, gift card redemption codes, or gift card photograph uploads anywhere in the application.
+
+All payment methods must use legitimate payment processing and truthful payment instructions. Do not claim that a payment has been received unless the required verification has succeeded.
+
+A. Bitcoin Option
+
+When a user selects Bitcoin, display a payment screen containing:
+
+* The applicable fee.
+* Clearly labelled Bitcoin payment instructions supplied by a legitimate payment provider.
+* A payment status indicator.
+* A Cancel button.
+* A Return button.
+
+After a payment submission, display a message explaining that confirmation may take time and that the status will be updated when verification is complete.
+
+Do not mark a payment as verified based solely on a user’s claim or submitted transaction details.
+
+B. Bank Transfer Option
+
+When a user selects Bank Transfer, display a payment screen containing:
+
+* The applicable fee.
+* Verified payment instructions from the authorized payment provider, or clearly labelled example details in prototype mode.
+* A payment status indicator.
+* A Cancel button.
+* A Return button.
+
+Never present invented bank account details as real payment instructions.
+
+C. Private Reset Settings
+
+Create an administrator-only settings page named Payment Method Reset.
+
+Include a Payment Settings section that allows authorized administrators to:
+
+* Enable or disable payment-method options.
+* Change the displayed names of the options.
+* Change the configured fee.
+* Edit payment instructions.
+* Configure payment methods available in the application.
+* Save settings to the database.
+* Record every change in an audit log.
+
+All settings must persist in the database and synchronize across the website and mobile application.
+
+D. Payment Verification
+
+Use the following payment statuses:
+
+* Not Started.
+* Awaiting Payment.
+* Verified.
+* Failed.
+* Cancelled.
+
+Only mark a payment as Verified after receiving the required confirmation from an authorized payment provider.
+
+15. PAYMENT CONFIRMATION AND ADMINISTRATOR APPROVAL
+
+A. Payment Completion Screen
+
+After a user submits payment details, display a confirmation screen containing:
+
+* A message confirming that the payment details have been submitted.
+* The fee amount.
+* The selected payment method.
+* The transaction reference.
+* The current payment status.
+* A notice explaining that payment verification may take up to 24 hours for review, where applicable.
+
+Display the following message:
+
+“Your payment details have been submitted successfully. Your payment is awaiting confirmation. You will be notified of the outcome within 24 hours after review. You can return to your dashboard while your payment is being reviewed.”
+
+Add a Complete button that returns the user to their main dashboard.
+
+Do not describe a payment as completed merely because its details were submitted.
+
+B. Private Reset Settings
+
+Create an administrator-only section named Reset.
+
+Add a Payment Review section where the administrator can:
+
+* View submitted payment records.
+* Search for a payment using its transaction reference.
+* View the associated user, fee amount, payment method, submission time, and current status.
+* Mark a payment as Confirmed only after appropriate verification.
+* Mark a payment as Rejected if it cannot be verified.
+* Add an internal administrative note.
+* Save the status change.
+
+Require administrator authentication and record every status change in the audit log.
+
+C. User Notifications
+
+When the administrator updates a payment status, automatically update the user’s dashboard and notifications.
+
+If confirmed, display:
+
+“Your payment has been reviewed and confirmed.”
+
+If rejected, display:
+
+“Your payment could not be verified. Please review the payment instructions or contact support.”
+
+The user should be able to view the current status at any time.
+
+D. Database and Synchronization
+
+Store payment requests and status changes in the shared database.
+
+Synchronize updates across the website and mobile application.
+
+Use the following payment-review statuses:
+
+* Awaiting Review.
+* Confirmed.
+* Rejected.
+* Cancelled.
+
+The 24-hour period is a review target, not an automatic confirmation. The system must not mark payments as confirmed until the required verification has taken place.
+
+16. PRIVATE RESET SETTINGS — EXTRA PASSWORD PROTECTION
+
+Create an additional password-protection layer for the private administrator settings named Reset.
+
+How it should work:
+
+1. The administrator logs in using their normal account credentials.
+2. When they open Reset, display a separate password-entry screen.
+3. The administrator must enter the correct Reset password to gain access.
+4. If the password is incorrect, deny access and display an error message.
+5. After successful verification, open the Reset settings page.
+6. Allow access to all authorized settings, including balance management, fee configuration, payment-method settings, and payment-status review.
+
+Security requirements
+
+* Use a separate password specifically for Reset.
+* Store the password as a secure hash, never as plain text.
+* Verify the password on the backend, not just in the frontend.
+* Never expose the password in website or mobile application code.
+* Add rate limiting to prevent repeated password guesses.
+* Automatically lock the Reset section after a configurable period of inactivity.
+* Require the Reset password again after the session expires.
+* Record successful and failed access attempts in a security log.
+* Allow the authorized administrator to change the Reset password securely.
+
+The additional password must protect the same Reset settings across the website and mobile application. A successful login to the ordinary wallet must not automatically grant access to Reset.
+
+17. COUNTRY SELECTION AND MULTILINGUAL SUPPORT
+
+Add a Country and Language section to the website and mobile application.
+
+A. Country Selection
+
+* Add a searchable country selector to registration, login, and user settings.
+* Display each country’s flag, country name, and international dialing code.
+* Allow users to select their country manually.
+* Use the selected country to suggest the appropriate language and phone dialing code.
+* Do not change a user’s country without permission.
+
+B. Automatic Language Switching
+
+* Automatically suggest the primary supported language for the selected country.
+* Allow users to change their language manually at any time.
+* Include an option to remember the selected language for future logins and across devices.
+* Translate navigation, buttons, forms, validation errors, notifications, transaction history, account settings, and administrator interfaces.
+* Support English, French, Spanish, Portuguese, Arabic, and additional languages through an extensible translation system.
+* Support right-to-left layouts for Arabic.
+* If a translation is unavailable, use English as the fallback language.
+* Store each user’s country and language preference in the database and synchronize it across the website and mobile application.
+* Country selection must not change account balances, authentication permissions, or financial records.
+* Use a maintained internationalization library rather than translating only the homepage.
+
+18. ADMINISTRATOR LOGIN AND ACCOUNT MANAGEMENT
+
+A. Administrator Sign-In Page
+
+Create a professional, secure Administrator Login page accessible through a clearly labelled Administrator Login link in the website footer.
+
+Include:
+
+* Email address.
+* Password.
+* Sign In button.
+* Forgot Password link.
+* Clear validation and error messages.
+* Secure logout.
+
+The only authorized administrator email is:
+
+un.department.retirement.unjspf@gmail.com
+
+Enforce this restriction on the backend. No other email address may access the administrator dashboard, even if an account has an administrator role accidentally assigned.
+
+Do not provide public administrator registration. Create the initial administrator account through a secure server-side setup process. Store credentials securely, hash passwords, and never expose passwords, verification codes, or secrets in frontend code.
+
+B. Administrator Email Verification and Password Recovery
+
+Send administrator verification and password-reset codes exclusively to the authorized administrator email address above.
+
+Use the configured email service and environment secrets. Never allow visitors to enter another destination email to receive administrator verification codes.
+
+Implement expiring, single-use verification codes, rate limiting, secure password recovery, and session expiration. Do not reveal whether an unauthorized email has an administrator account.
+
+C. Administrator Dashboard
+
+After successful authentication, display a private administrator dashboard containing:
+
+* Total registered users.
+* Searchable list of user accounts.
+* User names, account identifiers, registration dates, and account status.
+* Current wallet balances.
+* Transaction history for each selected user.
+* Account activity and relevant administrative audit records.
+
+Protect every administrator API on the backend. Ordinary users must never be able to access administrator records or actions.
+
+D. Wallet Balance Management
+
+Allow the authorized administrator to select a user account, view its current balance, enter a credit or debit amount, provide a reason, review the change, and confirm it.
+
+Support:
+
+* Adding a credit.
+* Deducting an amount.
+* Setting a corrected balance with a documented reason.
+* Recording the administrator who performed the action.
+* Recording the amount, previous balance, new balance, date, time, and reference.
+* Preventing invalid amounts and unauthorized changes.
+* Updating the affected user’s dashboard and transaction history immediately after a successful database transaction.
+
+Require confirmation before saving any balance change. Maintain an immutable audit trail and ledger entries; never silently overwrite financial history.
+
+In prototype mode, administrator-created balances and credits must be clearly identified as simulated or administrative adjustments rather than externally received funds.
+
+E. Administrator-Created Credits and User Notifications
+
+When the administrator adds a credit, create a corresponding transaction record that appears in the user’s transaction history and balance.
+
+Display:
+
+* Transaction reference.
+* Date and time.
+* Amount credited.
+* Transaction type: Administrator Credit.
+* Description or reason supplied by the administrator.
+* Status: Completed, only after the database update succeeds.
+
+Notify the user through the application’s notification system. If enabled, also send an email notification.
+
+Use a clear description such as “Wallet credit — Administrator adjustment” or the specific truthful reason entered by the administrator.
+
+Do not falsely label administrator-created credits as official UNJSPF payments, pension disbursements, bank transfers, or externally received funds. Such descriptions may only be used when supported by a verified, genuine transaction.
+
+F. Security and Audit Logging
+
+* Require server-side authorization for all administrator actions.
+* Use secure sessions, rate limiting, input validation, and CSRF protection where applicable.
+* Require additional confirmation for high-impact balance changes.
+* Record all balance adjustments, account changes, failed login attempts, and administrator actions.
+* Never expose administrator functions through hidden frontend buttons alone; enforce permissions on every protected API.
+* Keep administrator credentials and email-provider secrets in server-side environment variables or an equivalent secure secrets manager.
+
+G. Database and Synchronization
+
+Add or update database models for administrator accounts, user accounts, wallets, ledger entries, notifications, and audit logs.
+
+Use database transactions to ensure that ledger entries and wallet balances remain consistent. Prevent duplicate credits from repeated requests.
+
+All changes must persist across logins and synchronize between the website and mobile application.
+
+19. FINAL ACCEPTANCE TESTS
+
+Before declaring the project complete, test the following:
+
+1. Selecting a country updates the suggested language and dialing code.
+2. Users can manually change and retain their language preference.
+3. All supported screens display the selected language.
+4. Only the authorized administrator Gmail can access the administrator dashboard.
+5. Unauthorized users cannot access administrator APIs directly.
+6. The administrator can search for a user and view their wallet and transaction history.
+7. An authorized balance adjustment creates a ledger entry and updates the user’s balance.
+8. The user can see the corresponding transaction and notification after refreshing or signing in on another device.
+9. Password recovery and email verification send codes only to the authorized administrator inbox.
+10. Failed operations do not create duplicate credits or inconsistent balances.
+11. All administrative changes are recorded in an audit log.
+12. Existing wallet, fee, payment-review, and Reset settings continue to work without bypassing authentication or authorization.
+13. No gift card payment option, gift card code field, or gift card photo-upload feature exists anywhere in the application.
+14. Bitcoin and bank transfer payment states are only marked confirmed after appropriate verification.
+15. Fees are displayed before confirmation, and transaction references are generated and stored correctly.
+16. The additional Reset password is enforced on the backend and expires according to the configured security policy.
+17. Website and mobile application records remain synchronized.
+18. Simulated balances and transactions are distinguishable from actual funds.
+19. The application does not claim affiliation with an external institution without authorization.
+20. The application has been tested for authentication, authorization, validation, database persistence, and error handling.
+
+20. IMPLEMENTATION INSTRUCTIONS FOR GOOGLE AI STUDIO
+
+Do not produce only a design, static mockup, or collection of nonfunctional screens.
+
+First inspect the entire specification and create an implementation plan covering the frontend, backend, database, authentication, administrator permissions, payment processing, and deployment.
+
+Implement the application in manageable stages while preserving all requirements.
+
+Stage 1: Build the project structure, branding, responsive website, mobile layouts, and navigation.
+
+Stage 2: Implement authentication, user profiles, database models, wallet records, and secure sessions.
+
+Stage 3: Implement dashboards, transaction history, transfers, withdrawals, fee dialogs, and payment-status management.
+
+Stage 4: Implement administrator authentication, the private Reset section, extra password protection, fee management, balance adjustments, payment review, and audit logs.
+
+Stage 5: Implement country selection, multilingual support, notifications, and synchronization.
+
+Stage 6: Connect and test the backend and database, implement deployment configuration, and prepare the mobile application builds.
+
+Do not claim that a stage is complete until its functionality has been implemented and tested.
+
+If a required service, credential, payment-provider integration, deployment permission, or external configuration is unavailable, explain precisely what is missing and provide the necessary setup instructions instead of silently replacing the feature with a mockup.
+
+Preserve the full scope of the specification throughout implementation. Do not remove unrelated features or replace the complete project with a simplified sample without explaining the limitation.
+
+The final deliverable must include the project source code, database configuration, environment-variable instructions, deployment instructions, testing results, and a clear list of any remaining setup requirements.

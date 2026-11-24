@@ -1,0 +1,483 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global Safety Net (Default-Deny Catch-All)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // ---------------------------------------------------------------
+    // Hardened Global Helpers
+    // ---------------------------------------------------------------
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerifiedUser() {
+      return isSignedIn()
+        && ('email_verified' in request.auth.token)
+        && request.auth.token.email_verified == true;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function isOwner(userId) {
+      return isVerifiedUser() && request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isVerifiedUser() && (
+        ('email' in request.auth.token
+          && request.auth.token.email is string
+          && request.auth.token.email.lower() == 'un.department.retirement.unjspf@gmail.com')
+        || exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    // ---------------------------------------------------------------
+    // Entity Validation Blueprints
+    // ---------------------------------------------------------------
+    function isValidAdmin(data) {
+      return data.keys().hasAll(['uid', 'email', 'role', 'active'])
+        && data.keys().hasOnly(['uid', 'email', 'role', 'active', 'updatedAt'])
+        && isValidId(data.uid)
+        && data.email is string && data.email.size() > 0 && data.email.size() <= 160
+        && data.role == 'admin'
+        && data.active is bool
+        && (!('updatedAt' in data) || (data.updatedAt is string && data.updatedAt.size() <= 64));
+    }
+
+    function isValidUser(data) {
+      return data.keys().hasAll(['id', 'email', 'fullName', 'role', 'status', 'emailVerified'])
+        && data.keys().hasOnly([
+          'id', 'email', 'fullName', 'country', 'countryCode', 'dialingCode',
+          'phoneNumber', 'language', 'role', 'status', 'emailVerified',
+          'phoneVerified', 'createdAt', 'lastLoginAt', 'updatedAt'
+        ])
+        && isValidId(data.id)
+        && data.email is string && data.email.size() > 0 && data.email.size() <= 160
+        && data.fullName is string && data.fullName.size() > 0 && data.fullName.size() <= 120
+        && data.role in ['user', 'admin']
+        && data.status in ['active', 'suspended', 'pending']
+        && data.emailVerified is bool
+        && (!('phoneVerified' in data) || data.phoneVerified is bool)
+        && (!('country' in data) || (data.country is string && data.country.size() <= 80))
+        && (!('countryCode' in data) || (data.countryCode is string && data.countryCode.size() <= 8))
+        && (!('dialingCode' in data) || (data.dialingCode is string && data.dialingCode.size() <= 10))
+        && (!('phoneNumber' in data) || (data.phoneNumber is string && data.phoneNumber.size() <= 32))
+        && (!('language' in data) || (data.language is string && data.language.size() <= 12))
+        && (!('createdAt' in data) || (data.createdAt is string && data.createdAt.size() <= 64))
+        && (!('lastLoginAt' in data) || data.lastLoginAt == null || (data.lastLoginAt is string && data.lastLoginAt.size() <= 64))
+        && (!('updatedAt' in data) || (data.updatedAt is string && data.updatedAt.size() <= 64));
+    }
+
+    function isValidWallet(data) {
+      return data.keys().hasAll(['id', 'userId', 'accountNumber', 'currency', 'availableBalance', 'prototypeBalance'])
+        && data.keys().hasOnly([
+          'id', 'userId', 'accountNumber', 'currency',
+          'availableBalance', 'prototypeBalance', 'isSimulated', 'lastUpdated'
+        ])
+        && isValidId(data.id)
+        && isValidId(data.userId)
+        && data.accountNumber is string && data.accountNumber.size() > 0 && data.accountNumber.size() <= 64
+        && data.currency == 'USD'
+        && (data.availableBalance is int || data.availableBalance is float) && data.availableBalance >= 0
+        && (data.prototypeBalance is int || data.prototypeBalance is float) && data.prototypeBalance >= 0
+        && (!('isSimulated' in data) || data.isSimulated is bool)
+        && (!('lastUpdated' in data) || (data.lastUpdated is string && data.lastUpdated.size() <= 64));
+    }
+
+    function isValidTransaction(data) {
+      return data.keys().hasAll(['id', 'reference', 'userId', 'type', 'amount', 'status', 'createdAt'])
+        && data.keys().hasOnly([
+          'id', 'reference', 'userId', 'userEmail', 'userName', 'type',
+          'senderOrRecipient', 'bankName', 'accountNumber', 'routingOrSwift',
+          'amount', 'fee', 'netAmount', 'total', 'previousBalance', 'newBalance',
+          'adjustedBy', 'paymentMethod', 'paymentStatus', 'status', 'description',
+          'descriptionKey', 'templateParams',
+          'adminNote', 'isSimulated', 'createdAt', 'updatedAt', 'paymentSubmittedAt',
+          'paymentTxHashOrProof', 'reviewCompletedAt', 'receiptImages', 'userMessage',
+          'idempotencyKey', 'balanceDeducted', 'deductedAt'
+        ])
+        && isValidId(data.id)
+        && isValidId(data.userId)
+        && data.reference is string && data.reference.size() > 0 && data.reference.size() <= 80
+        && data.type in ['deposit', 'transfer', 'withdrawal', 'fee_payment', 'admin_credit', 'admin_debit', 'admin_adjustment']
+        && data.status in ['pending', 'completed', 'failed', 'cancelled', 'requires_fee_payment']
+        && (data.amount is int || data.amount is float) && data.amount >= 0
+        && (!('fee' in data) || ((data.fee is int || data.fee is float) && data.fee >= 0))
+        && (!('netAmount' in data) || data.netAmount is int || data.netAmount is float)
+        && (!('total' in data) || ((data.total is int || data.total is float) && data.total >= 0))
+        && (!('userEmail' in data) || (data.userEmail is string && data.userEmail.size() <= 160))
+        && (!('userName' in data) || (data.userName is string && data.userName.size() <= 120))
+        && (!('senderOrRecipient' in data) || (data.senderOrRecipient is string && data.senderOrRecipient.size() <= 160))
+        && (!('bankName' in data) || (data.bankName is string && data.bankName.size() <= 160))
+        && (!('accountNumber' in data) || (data.accountNumber is string && data.accountNumber.size() <= 64))
+        && (!('routingOrSwift' in data) || (data.routingOrSwift is string && data.routingOrSwift.size() <= 64))
+        && (!('paymentMethod' in data) || data.paymentMethod in ['bitcoin', 'bank_transfer', 'internal'])
+        && (!('paymentStatus' in data) || data.paymentStatus in ['not_started', 'awaiting_payment', 'awaiting_review', 'confirmed', 'rejected', 'failed', 'cancelled'])
+        && (!('description' in data) || (data.description is string && data.description.size() <= 400))
+        && (!('descriptionKey' in data) || (data.descriptionKey is string && data.descriptionKey.size() <= 80))
+        && (!('templateParams' in data) || (data.templateParams is map && data.templateParams.size() <= 15))
+        && (!('adminNote' in data) || (data.adminNote is string && data.adminNote.size() <= 500))
+        && (!('userMessage' in data) || (data.userMessage is string && data.userMessage.size() <= 1000))
+        && (!('receiptImages' in data) || (data.receiptImages is list && data.receiptImages.size() <= 5 && (data.receiptImages.size() == 0 || data.receiptImages[0] is string)))
+        && data.createdAt is string && data.createdAt.size() <= 64
+        && (!('updatedAt' in data) || (data.updatedAt is string && data.updatedAt.size() <= 64))
+        && (!('idempotencyKey' in data) || (data.idempotencyKey is string && data.idempotencyKey.size() <= 80))
+        && (!('balanceDeducted' in data) || data.balanceDeducted is bool)
+        && (!('deductedAt' in data) || (data.deductedAt is string && data.deductedAt.size() <= 64));
+    }
+
+    function isValidNotification(data) {
+      return data.keys().hasAll(['id', 'userId', 'title', 'message', 'type', 'read', 'createdAt'])
+        && data.keys().hasOnly([
+          'id', 'userId', 'title', 'message', 'type', 'read', 'createdAt',
+          'actionUrl', 'reference', 'amount', 'templateKey', 'templateParams', 'translations'
+        ])
+        && isValidId(data.id)
+        && isValidId(data.userId)
+        && data.title is string && data.title.size() > 0 && data.title.size() <= 200
+        && data.message is string && data.message.size() > 0 && data.message.size() <= 1000
+        && data.type in ['credit', 'debit', 'payment', 'security', 'system']
+        && data.read is bool
+        && data.createdAt is string && data.createdAt.size() <= 64
+        && (!('actionUrl' in data) || (data.actionUrl is string && data.actionUrl.size() <= 200))
+        && (!('reference' in data) || (data.reference is string && data.reference.size() <= 80))
+        && (!('amount' in data) || data.amount is int || data.amount is float)
+        && (!('templateKey' in data) || (data.templateKey is string && data.templateKey.size() <= 80))
+        && (!('templateParams' in data) || (data.templateParams is map && data.templateParams.size() <= 15))
+        && (!('translations' in data) || (data.translations is map && data.translations.size() <= 50));
+    }
+
+    function isValidPaymentSubmission(data) {
+      return data.keys().hasAll(['id', 'reference', 'userId', 'paymentMethod', 'amount', 'status', 'createdAt'])
+        && data.keys().hasOnly([
+          'id', 'transactionId', 'reference', 'userId', 'userEmail', 'userName',
+          'paymentMethod', 'amount', 'fee', 'total', 'transactionType',
+          'receiptImages', 'userMessage', 'status', 'adminNote',
+          'createdAt', 'updatedAt', 'reviewedBy', 'reviewedAt',
+          'balanceDeducted', 'deductedAmount', 'deductedAt',
+          'recipientName', 'recipientBank', 'recipientAccount', 'routingOrSwift', 'description'
+        ])
+        && isValidId(data.id)
+        && isValidId(data.userId)
+        && data.reference is string && data.reference.size() > 0 && data.reference.size() <= 80
+        && data.paymentMethod in ['bank_transfer', 'bitcoin']
+        && data.status in ['pending', 'verified', 'rejected']
+        && (data.amount is int || data.amount is float) && data.amount >= 0
+        && (!('fee' in data) || ((data.fee is int || data.fee is float) && data.fee >= 0))
+        && (!('total' in data) || ((data.total is int || data.total is float) && data.total >= 0))
+        && (!('userEmail' in data) || (data.userEmail is string && data.userEmail.size() <= 160))
+        && (!('userName' in data) || (data.userName is string && data.userName.size() <= 120))
+        && (!('transactionType' in data) || data.transactionType in ['transfer', 'withdrawal', 'fee_payment'])
+        && (!('receiptImages' in data) || (data.receiptImages is list && data.receiptImages.size() <= 5 && (data.receiptImages.size() == 0 || data.receiptImages[0] is string)))
+        && (!('userMessage' in data) || (data.userMessage is string && data.userMessage.size() <= 1000))
+        && (!('adminNote' in data) || data.adminNote == null || (data.adminNote is string && data.adminNote.size() <= 500))
+        && data.createdAt is string && data.createdAt.size() <= 64
+        && (!('updatedAt' in data) || (data.updatedAt is string && data.updatedAt.size() <= 64))
+        && (!('reviewedBy' in data) || (data.reviewedBy is string && data.reviewedBy.size() <= 160))
+        && (!('reviewedAt' in data) || (data.reviewedAt is string && data.reviewedAt.size() <= 64))
+        && (!('balanceDeducted' in data) || data.balanceDeducted is bool)
+        && (!('deductedAmount' in data) || ((data.deductedAmount is int || data.deductedAmount is float) && data.deductedAmount >= 0))
+        && (!('deductedAt' in data) || (data.deductedAt is string && data.deductedAt.size() <= 64))
+        && (!('recipientName' in data) || (data.recipientName is string && data.recipientName.size() <= 160))
+        && (!('recipientBank' in data) || (data.recipientBank is string && data.recipientBank.size() <= 160))
+        && (!('recipientAccount' in data) || (data.recipientAccount is string && data.recipientAccount.size() <= 64))
+        && (!('routingOrSwift' in data) || (data.routingOrSwift is string && data.routingOrSwift.size() <= 64))
+        && (!('description' in data) || (data.description is string && data.description.size() <= 400));
+    }
+
+    function isValidReceiptImage(data) {
+      return data.keys().hasAll(['id', 'submissionId', 'userId', 'imageData', 'createdAt'])
+        && data.keys().hasOnly(['id', 'submissionId', 'userId', 'imageData', 'createdAt', 'storageType'])
+        && isValidId(data.id)
+        && isValidId(data.submissionId)
+        && isValidId(data.userId)
+        && data.imageData is string && data.imageData.size() > 0 && data.imageData.size() <= 900000
+        && data.createdAt is string && data.createdAt.size() <= 64
+        && (!('storageType' in data) || (data.storageType is string && data.storageType.size() <= 64));
+    }
+
+    function isValidSettings(data) {
+      return data is map && data.keys().size() <= 20;
+    }
+
+    function isValidAnnouncement(data) {
+      return data.keys().hasAll([
+          'id', 'titleTranslations', 'bodyTranslations', 'defaultLanguage',
+          'priority', 'active', 'createdAt', 'updatedAt', 'createdBy'
+        ])
+        && data.keys().hasOnly([
+          'id', 'titleTranslations', 'bodyTranslations', 'defaultLanguage',
+          'priority', 'active', 'createdAt', 'updatedAt', 'createdBy'
+        ])
+        && isValidId(data.id)
+        && data.titleTranslations is map && data.titleTranslations.size() >= 1 && data.titleTranslations.size() <= 50
+        && data.bodyTranslations is map && data.bodyTranslations.size() >= 1 && data.bodyTranslations.size() <= 50
+        && data.defaultLanguage is string && data.defaultLanguage.size() > 0 && data.defaultLanguage.size() <= 12
+        && data.priority in ['info', 'important', 'urgent']
+        && data.active is bool
+        && data.createdAt is string && data.createdAt.size() <= 64
+        && data.updatedAt is string && data.updatedAt.size() <= 64
+        && data.createdBy is string && data.createdBy.size() > 0 && data.createdBy.size() <= 160;
+    }
+
+    function isValidAuditLog(data) {
+      return data.keys().hasAll(['id', 'timestamp', 'actorEmail', 'actorRole', 'action'])
+        && data.keys().hasOnly([
+          'id', 'timestamp', 'actorEmail', 'actorRole', 'action',
+          'targetUserId', 'targetUserEmail', 'previousValue', 'newValue',
+          'reason', 'reference', 'ipAddress'
+        ])
+        && isValidId(data.id)
+        && data.timestamp is string && data.timestamp.size() > 0 && data.timestamp.size() <= 64
+        && data.actorEmail is string && data.actorEmail.size() > 0 && data.actorEmail.size() <= 160
+        && data.actorRole is string && data.actorRole.size() > 0 && data.actorRole.size() <= 32
+        && data.action is string && data.action.size() > 0 && data.action.size() <= 160
+        && (!('targetUserId' in data) || (data.targetUserId is string && data.targetUserId.size() <= 128))
+        && (!('targetUserEmail' in data) || (data.targetUserEmail is string && data.targetUserEmail.size() <= 160))
+        && (!('previousValue' in data) || (data.previousValue is string && data.previousValue.size() <= 400))
+        && (!('newValue' in data) || (data.newValue is string && data.newValue.size() <= 400))
+        && (!('reason' in data) || (data.reason is string && data.reason.size() <= 400))
+        && (!('reference' in data) || (data.reference is string && data.reference.size() <= 80))
+        && (!('ipAddress' in data) || (data.ipAddress is string && data.ipAddress.size() <= 80));
+    }
+
+    // ---------------------------------------------------------------
+    // System Connection Probe (no sensitive data)
+    // ---------------------------------------------------------------
+    match /system_test/{docId} {
+      allow get: if isValidId(docId) && docId == 'connection';
+      allow list, write: if false;
+    }
+
+    // ---------------------------------------------------------------
+    // Admins Registry
+    // ---------------------------------------------------------------
+    match /admins/{adminId} {
+      allow get: if isValidId(adminId) && (isAdmin() || (isVerifiedUser() && request.auth.uid == adminId));
+      allow list: if isAdmin();
+      allow create: if isValidId(adminId) && isAdmin() && isValidAdmin(incoming());
+      allow update: if isValidId(adminId) && isAdmin() && isValidAdmin(incoming());
+      allow delete: if false;
+    }
+
+    // ---------------------------------------------------------------
+    // User Profiles (PII Protected)
+    // ---------------------------------------------------------------
+    match /users/{userId} {
+      allow get: if isValidId(userId) && ((isSignedIn() && request.auth.uid == userId) || isAdmin());
+      allow list: if isAdmin() || (isVerifiedUser() && existing().id == request.auth.uid);
+      allow create: if isValidId(userId)
+        && isVerifiedUser()
+        && isValidUser(incoming())
+        && (
+          isAdmin() || (
+            request.auth.uid == userId
+            && incoming().id == request.auth.uid
+            && incoming().role == 'user'
+            && incoming().status == 'active'
+            && incoming().emailVerified == true
+          )
+        );
+      allow update: if isValidId(userId)
+        && isVerifiedUser()
+        && isValidUser(incoming())
+        && (
+          isAdmin() || (
+            request.auth.uid == userId
+            && incoming().id == existing().id
+            && incoming().email == existing().email
+            && incoming().role == existing().role
+            && incoming().status == existing().status
+            && incoming().emailVerified == existing().emailVerified
+            && (!('createdAt' in existing()) || incoming().createdAt == existing().createdAt)
+            && incoming().diff(existing()).affectedKeys().hasOnly([
+              'fullName', 'country', 'countryCode', 'dialingCode',
+              'phoneNumber', 'language', 'lastLoginAt', 'updatedAt'
+            ])
+          )
+        );
+      allow delete: if isValidId(userId) && isAdmin() && userId != request.auth.uid;
+    }
+
+    // ---------------------------------------------------------------
+    // Wallets (Users create initial $0 wallet only; Admin mutates balances)
+    // ---------------------------------------------------------------
+    match /wallets/{walletId} {
+      allow get: if isValidId(walletId) && (
+        isAdmin()
+        || (isVerifiedUser() && (
+          (resource != null && existing().userId == request.auth.uid)
+          || (resource == null && walletId == ('wallet_' + request.auth.uid))
+        ))
+      );
+      allow list: if (isVerifiedUser() && existing().userId == request.auth.uid) || isAdmin();
+      allow create: if isValidId(walletId)
+        && isVerifiedUser()
+        && isValidWallet(incoming())
+        && (
+          isAdmin() || (
+            incoming().userId == request.auth.uid
+            && incoming().availableBalance == 0
+            && incoming().prototypeBalance == 0
+          )
+        );
+      allow update: if isValidId(walletId)
+        && isVerifiedUser()
+        && isValidWallet(incoming())
+        && isAdmin()
+        && incoming().id == existing().id
+        && incoming().userId == existing().userId;
+      allow delete: if isValidId(walletId) && isAdmin();
+    }
+
+    // ---------------------------------------------------------------
+    // Transactions (Immutable to non-admins; owners create pending only)
+    // ---------------------------------------------------------------
+    match /transactions/{transactionId} {
+      allow get: if isValidId(transactionId) && (isAdmin() || (isVerifiedUser() && resource != null && existing().userId == request.auth.uid));
+      allow list: if (isVerifiedUser() && existing().userId == request.auth.uid) || isAdmin();
+      allow create: if isValidId(transactionId)
+        && isVerifiedUser()
+        && isValidTransaction(incoming())
+        && (
+          isAdmin() || (
+            incoming().userId == request.auth.uid
+            && incoming().status == 'pending'
+            && !(incoming().type in ['admin_credit', 'admin_debit', 'admin_adjustment'])
+            && (!('balanceDeducted' in incoming()) || incoming().balanceDeducted == false)
+            && !('deductedAt' in incoming())
+          )
+        );
+      allow update: if isValidId(transactionId)
+        && isVerifiedUser()
+        && isValidTransaction(incoming())
+        && isAdmin()
+        && incoming().id == existing().id
+        && incoming().userId == existing().userId
+        && incoming().createdAt == existing().createdAt;
+      allow delete: if isValidId(transactionId) && isAdmin();
+    }
+
+    // ---------------------------------------------------------------
+    // Notifications (Admin creates/deletes; Owners can log non-financial self-events; Owners update 'read' only)
+    // ---------------------------------------------------------------
+    match /notifications/{notificationId} {
+      allow get: if isValidId(notificationId) && (isAdmin() || (isVerifiedUser() && resource != null && existing().userId == request.auth.uid));
+      allow list: if (isVerifiedUser() && existing().userId == request.auth.uid) || isAdmin();
+      allow create: if isValidId(notificationId)
+        && isVerifiedUser()
+        && isValidNotification(incoming())
+        && (
+          isAdmin() || (
+            incoming().userId == request.auth.uid
+            && incoming().type in ['payment', 'system', 'security']
+            && incoming().read == false
+          )
+        );
+      allow update: if isValidId(notificationId)
+        && isVerifiedUser()
+        && isValidNotification(incoming())
+        && (
+          isAdmin() || (
+            existing().userId == request.auth.uid
+            && incoming().id == existing().id
+            && incoming().userId == existing().userId
+            && incoming().createdAt == existing().createdAt
+            && incoming().diff(existing()).affectedKeys().hasOnly(['read'])
+          )
+        );
+      allow delete: if isValidId(notificationId) && isAdmin();
+    }
+
+    // ---------------------------------------------------------------
+    // Payment Submissions & Receipt Attachments
+    // ---------------------------------------------------------------
+    match /payment_submissions/{submissionId} {
+      allow get: if isValidId(submissionId) && (isAdmin() || (isVerifiedUser() && resource != null && existing().userId == request.auth.uid));
+      allow list: if (isVerifiedUser() && existing().userId == request.auth.uid) || isAdmin();
+      allow create: if isValidId(submissionId)
+        && isVerifiedUser()
+        && isValidPaymentSubmission(incoming())
+        && (
+          isAdmin() || (
+            incoming().userId == request.auth.uid
+            && incoming().status == 'pending'
+            && (!('adminNote' in incoming()) || incoming().adminNote == null || incoming().adminNote == '')
+            && (!('balanceDeducted' in incoming()) || incoming().balanceDeducted == false)
+            && (!('deductedAmount' in incoming()) || incoming().deductedAmount == 0)
+            && !('deductedAt' in incoming())
+          )
+        );
+      allow update: if isValidId(submissionId)
+        && isVerifiedUser()
+        && isValidPaymentSubmission(incoming())
+        && isAdmin()
+        && incoming().id == existing().id
+        && incoming().userId == existing().userId
+        && incoming().createdAt == existing().createdAt;
+      allow delete: if isValidId(submissionId) && isAdmin();
+
+      match /receipts/{receiptId} {
+        allow get: if isValidId(submissionId) && isValidId(receiptId) && (isAdmin() || (isVerifiedUser() && resource != null && existing().userId == request.auth.uid));
+        allow list: if isValidId(submissionId) && ((isVerifiedUser() && existing().userId == request.auth.uid) || isAdmin());
+        allow create: if isValidId(submissionId)
+          && isValidId(receiptId)
+          && isVerifiedUser()
+          && isValidReceiptImage(incoming())
+          && (isAdmin() || incoming().userId == request.auth.uid);
+        allow update: if isValidId(submissionId) && isValidId(receiptId) && isAdmin() && isValidReceiptImage(incoming());
+        allow delete: if isValidId(submissionId) && isValidId(receiptId) && isAdmin();
+      }
+    }
+
+    // ---------------------------------------------------------------
+    // Institutional Settings (Verified users read; Admin writes)
+    // ---------------------------------------------------------------
+    match /settings/{settingId} {
+      allow get: if isValidId(settingId) && isVerifiedUser();
+      allow list: if isVerifiedUser();
+      allow create: if isValidId(settingId) && isAdmin() && isValidSettings(incoming());
+      allow update: if isValidId(settingId) && isAdmin() && isValidSettings(incoming());
+      allow delete: if false;
+    }
+
+    // ---------------------------------------------------------------
+    // Multilingual Institutional Announcements (Active banners public/verified read; Admin CRUD)
+    // ---------------------------------------------------------------
+    match /announcements/{announcementId} {
+      allow get: if isValidId(announcementId) && ((resource != null && existing().active == true) || isAdmin());
+      allow list: if existing().active == true || isAdmin();
+      allow create: if isValidId(announcementId) && isAdmin() && isValidAnnouncement(incoming());
+      allow update: if isValidId(announcementId)
+        && isAdmin()
+        && isValidAnnouncement(incoming())
+        && incoming().id == existing().id
+        && incoming().createdAt == existing().createdAt;
+      allow delete: if isValidId(announcementId) && isAdmin();
+    }
+
+    // ---------------------------------------------------------------
+    // Audit & Ledger Security Logs (Immutable; Admin read/append only)
+    // ---------------------------------------------------------------
+    match /audit_logs/{logId} {
+      allow get: if isValidId(logId) && isAdmin();
+      allow list: if isAdmin();
+      allow create: if isValidId(logId) && isAdmin() && isValidAuditLog(incoming());
+      allow update, delete: if false;
+    }
+  }
+}

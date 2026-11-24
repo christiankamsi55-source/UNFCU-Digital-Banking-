@@ -1,0 +1,639 @@
+{
+  "entities": {
+    "Admin": {
+      "title": "Admin",
+      "description": "Authorized institutional administrator record",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Firebase Auth UID of authorized administrator"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 160,
+          "description": "Whitelisted administrator email address"
+        },
+        "role": {
+          "type": "string",
+          "enum": ["admin"],
+          "description": "Administrator role identifier"
+        },
+        "active": {
+          "type": "boolean",
+          "description": "Whether administrator access is active"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "Last synchronized timestamp"
+        }
+      },
+      "required": ["uid", "email", "role", "active"]
+    },
+    "User": {
+      "title": "User",
+      "description": "Bank customer or administrator account profile",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Unique user identifier matching auth UID"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 160,
+          "description": "Primary verified email address"
+        },
+        "fullName": {
+          "type": "string",
+          "maxLength": 120,
+          "description": "Legal full name of account holder"
+        },
+        "country": {
+          "type": "string",
+          "maxLength": 80,
+          "description": "Country of residence"
+        },
+        "countryCode": {
+          "type": "string",
+          "maxLength": 8,
+          "description": "ISO 2-letter country code"
+        },
+        "dialingCode": {
+          "type": "string",
+          "maxLength": 10,
+          "description": "International phone dialing code (e.g. +1)"
+        },
+        "phoneNumber": {
+          "type": "string",
+          "maxLength": 32,
+          "description": "Verified phone number in E.164 standard"
+        },
+        "language": {
+          "type": "string",
+          "maxLength": 12,
+          "description": "User preferred language code"
+        },
+        "role": {
+          "type": "string",
+          "enum": ["user", "admin"],
+          "description": "User authorization tier"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "suspended", "pending"],
+          "description": "Account operating status"
+        },
+        "emailVerified": {
+          "type": "boolean",
+          "description": "Whether email has been verified via Firebase Authentication"
+        },
+        "phoneVerified": {
+          "type": "boolean",
+          "description": "Whether phone has been verified via SMS"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "Account registration timestamp"
+        },
+        "lastLoginAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "Most recent login timestamp"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "Most recent profile update timestamp"
+        }
+      },
+      "required": ["id", "email", "fullName", "role", "status", "emailVerified"]
+    },
+    "Wallet": {
+      "title": "Wallet",
+      "description": "Digital banking balance ledger account",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Unique wallet identifier"
+        },
+        "userId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Account owner user ID"
+        },
+        "accountNumber": {
+          "type": "string",
+          "maxLength": 64,
+          "description": "Unique bank account number"
+        },
+        "currency": {
+          "type": "string",
+          "enum": ["USD"],
+          "description": "Primary currency ISO code"
+        },
+        "availableBalance": {
+          "type": "number",
+          "description": "Available settled ledger balance"
+        },
+        "prototypeBalance": {
+          "type": "number",
+          "description": "Dual ledger balance"
+        },
+        "isSimulated": {
+          "type": "boolean",
+          "description": "Ledger state flag"
+        },
+        "lastUpdated": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "Last balance mutation timestamp"
+        }
+      },
+      "required": ["id", "userId", "accountNumber", "currency", "availableBalance", "prototypeBalance"]
+    },
+    "Transaction": {
+      "title": "Transaction",
+      "description": "Bank transfer or payment record",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Unique transaction record identifier"
+        },
+        "reference": {
+          "type": "string",
+          "maxLength": 80,
+          "description": "Public bank transaction reference code"
+        },
+        "userId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Initiating user ID"
+        },
+        "userEmail": {
+          "type": "string",
+          "maxLength": 160,
+          "description": "Initiating user email"
+        },
+        "userName": {
+          "type": "string",
+          "maxLength": 120,
+          "description": "Initiating user full name"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["deposit", "transfer", "withdrawal", "fee_payment", "admin_credit", "admin_debit", "admin_adjustment"],
+          "description": "Transaction category"
+        },
+        "amount": {
+          "type": "number",
+          "description": "Transaction amount in USD"
+        },
+        "fee": {
+          "type": "number",
+          "description": "Processing fee incurred"
+        },
+        "netAmount": {
+          "type": "number",
+          "description": "Net amount debited or credited"
+        },
+        "total": {
+          "type": "number",
+          "description": "Total transaction amount including fee"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["completed", "pending", "failed", "cancelled", "requires_fee_payment"],
+          "description": "Settlement state"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "Transaction creation timestamp"
+        },
+        "descriptionKey": {
+          "type": "string",
+          "maxLength": 80,
+          "description": "Optional i18n description template key"
+        },
+        "templateParams": {
+          "type": "object",
+          "description": "Optional localization interpolation parameters"
+        },
+        "idempotencyKey": {
+          "type": "string",
+          "maxLength": 80,
+          "description": "Optional idempotency key preventing duplicate credit/debit adjustments"
+        }
+      },
+      "required": ["id", "reference", "userId", "type", "amount", "status", "createdAt"]
+    },
+    "Notification": {
+      "title": "Notification",
+      "description": "User security and ledger transaction alerts",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Unique notification identifier"
+        },
+        "userId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Target recipient user ID"
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Notification subject heading"
+        },
+        "message": {
+          "type": "string",
+          "maxLength": 1000,
+          "description": "Detailed notification body"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["credit", "debit", "payment", "security", "system"],
+          "description": "Notification category"
+        },
+        "read": {
+          "type": "boolean",
+          "description": "Whether message has been marked read"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "Creation timestamp"
+        },
+        "templateKey": {
+          "type": "string",
+          "maxLength": 80,
+          "description": "Optional structured notification localization template key"
+        },
+        "templateParams": {
+          "type": "object",
+          "description": "Optional structured interpolation values"
+        },
+        "translations": {
+          "type": "object",
+          "description": "Optional per-language localized notification title and message overrides"
+        }
+      },
+      "required": ["id", "userId", "title", "message", "type", "read", "createdAt"]
+    },
+    "FeeSettings": {
+      "title": "FeeSettings",
+      "description": "Global institutional transfer and withdrawal fee schedules",
+      "type": "object",
+      "properties": {
+        "transferFixedFee": {
+          "type": "number",
+          "description": "Fixed fee in USD for transfers"
+        },
+        "transferPercentFee": {
+          "type": "number",
+          "description": "Percentage fee for transfers"
+        },
+        "transferFeeEnabled": {
+          "type": "boolean",
+          "description": "Whether transfer fee is active"
+        },
+        "withdrawalFixedFee": {
+          "type": "number",
+          "description": "Fixed fee in USD for withdrawals"
+        },
+        "withdrawalPercentFee": {
+          "type": "number",
+          "description": "Percentage fee for withdrawals"
+        },
+        "withdrawalFeeEnabled": {
+          "type": "boolean",
+          "description": "Whether withdrawal fee is active"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "Last updated timestamp"
+        },
+        "updatedBy": {
+          "type": "string",
+          "maxLength": 160,
+          "description": "Administrator email who configured fees"
+        }
+      },
+      "required": ["transferFixedFee", "transferFeeEnabled", "withdrawalFixedFee", "withdrawalFeeEnabled"]
+    },
+    "PaymentSubmission": {
+      "title": "PaymentSubmission",
+      "description": "User submitted bank wire or Bitcoin receipt verification records",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Unique payment submission identifier"
+        },
+        "reference": {
+          "type": "string",
+          "maxLength": 80,
+          "description": "Transaction reference code"
+        },
+        "userId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Submitting user ID"
+        },
+        "userEmail": {
+          "type": "string",
+          "maxLength": 160,
+          "description": "Submitting user email"
+        },
+        "userName": {
+          "type": "string",
+          "maxLength": 120,
+          "description": "Submitting user full name"
+        },
+        "paymentMethod": {
+          "type": "string",
+          "enum": ["bank_transfer", "bitcoin"],
+          "description": "Selected payment method"
+        },
+        "amount": {
+          "type": "number",
+          "description": "Payment principal amount"
+        },
+        "fee": {
+          "type": "number",
+          "description": "Fee amount"
+        },
+        "total": {
+          "type": "number",
+          "description": "Total payment amount"
+        },
+        "receiptImages": {
+          "type": "array",
+          "description": "Receipt images submitted for verification"
+        },
+        "userMessage": {
+          "type": "string",
+          "maxLength": 1000,
+          "description": "User written message or transaction reference"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "verified", "rejected"],
+          "description": "Payment verification status"
+        },
+        "adminNote": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "Administrator review note"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "Submission timestamp"
+        }
+      },
+      "required": ["id", "reference", "userId", "paymentMethod", "amount", "status", "createdAt"]
+    },
+    "ReceiptImage": {
+      "title": "ReceiptImage",
+      "description": "Individual receipt attachment document stored under a payment submission",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Receipt attachment identifier"
+        },
+        "submissionId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Parent payment submission identifier"
+        },
+        "userId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Uploading owner UID"
+        },
+        "imageData": {
+          "type": "string",
+          "maxLength": 900000,
+          "description": "Encoded receipt image payload"
+        },
+        "storageType": {
+          "type": "string",
+          "maxLength": 64,
+          "description": "Receipt storage backend descriptor"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "Upload timestamp"
+        }
+      },
+      "required": ["id", "submissionId", "userId", "imageData", "createdAt"]
+    },
+    "Announcement": {
+      "title": "Announcement",
+      "description": "Multilingual institutional announcements and alerts managed by administrator",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Unique announcement identifier"
+        },
+        "titleTranslations": {
+          "type": "object",
+          "description": "Map of ISO language codes to localized announcement titles"
+        },
+        "bodyTranslations": {
+          "type": "object",
+          "description": "Map of ISO language codes to localized announcement bodies"
+        },
+        "defaultLanguage": {
+          "type": "string",
+          "maxLength": 12,
+          "description": "Default fallback language code"
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["info", "important", "urgent"],
+          "description": "Announcement visibility level"
+        },
+        "active": {
+          "type": "boolean",
+          "description": "Whether the announcement is published and active"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "Creation timestamp"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "Last modification timestamp"
+        },
+        "createdBy": {
+          "type": "string",
+          "maxLength": 160,
+          "description": "Publishing administrator email"
+        }
+      },
+      "required": ["id", "titleTranslations", "bodyTranslations", "defaultLanguage", "priority", "active", "createdAt", "updatedAt", "createdBy"]
+    },
+    "AuditLog": {
+      "title": "AuditLog",
+      "description": "Immutable administrative & security audit trail entry",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Unique audit log record identifier"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 64,
+          "description": "Audit event timestamp"
+        },
+        "actorEmail": {
+          "type": "string",
+          "maxLength": 160,
+          "description": "Email of actor triggering event"
+        },
+        "actorRole": {
+          "type": "string",
+          "maxLength": 32,
+          "description": "Role of actor triggering event"
+        },
+        "action": {
+          "type": "string",
+          "maxLength": 160,
+          "description": "Audit action code"
+        },
+        "targetUserId": {
+          "type": "string",
+          "maxLength": 128,
+          "description": "Optional target user ID"
+        },
+        "targetUserEmail": {
+          "type": "string",
+          "maxLength": 160,
+          "description": "Optional target user email"
+        },
+        "previousValue": {
+          "type": "string",
+          "maxLength": 400,
+          "description": "Previous state snapshot"
+        },
+        "newValue": {
+          "type": "string",
+          "maxLength": 400,
+          "description": "New state snapshot"
+        },
+        "reason": {
+          "type": "string",
+          "maxLength": 400,
+          "description": "Action justification reason"
+        },
+        "reference": {
+          "type": "string",
+          "maxLength": 80,
+          "description": "Related transaction or record reference"
+        },
+        "ipAddress": {
+          "type": "string",
+          "maxLength": 80,
+          "description": "Client request IP"
+        }
+      },
+      "required": ["id", "timestamp", "actorEmail", "actorRole", "action"]
+    }
+  },
+  "firestore": {
+    "/admins/{adminId}": {
+      "schema": "Admin",
+      "description": "Authorized institutional administrator identities"
+    },
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Registered customer profiles and admin identities"
+    },
+    "/wallets/{walletId}": {
+      "schema": "Wallet",
+      "description": "Customer balances and digital wallet records"
+    },
+    "/transactions/{transactionId}": {
+      "schema": "Transaction",
+      "description": "Bank transaction ledger"
+    },
+    "/notifications/{notificationId}": {
+      "schema": "Notification",
+      "description": "Customer notification records"
+    },
+    "/payment_submissions/{submissionId}": {
+      "schema": "PaymentSubmission",
+      "description": "User payment receipts and verification reviews"
+    },
+    "/payment_submissions/{submissionId}/receipts/{receiptId}": {
+      "schema": "ReceiptImage",
+      "description": "Durable individual receipt images subcollection"
+    },
+    "/settings/{settingId}": {
+      "schema": "FeeSettings",
+      "description": "Global institutional configuration documents"
+    },
+    "/announcements/{announcementId}": {
+      "schema": "Announcement",
+      "description": "Multilingual institutional announcements and alerts"
+    },
+    "/audit_logs/{logId}": {
+      "schema": "AuditLog",
+      "description": "Immutable administrative and security audit trail"
+    }
+  }
+}

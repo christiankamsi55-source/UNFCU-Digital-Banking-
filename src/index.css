@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --unfcu-navy: #173A52;
+    --unfcu-navy-deep: #123047;
+    --unfcu-blue: #2166D5;
+    --unfcu-blue-hover: #1A54B5;
+    --unfcu-canvas: #E5EBF2;
+    --unfcu-surface: #FFFFFF;
+    --unfcu-border: #E5E7EB;
+    --unfcu-ink: #0F172A;
+    --unfcu-muted: #475569;
+  }
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans Devanagari', 'Noto Sans Bengali', 'Noto Sans Thai', 'Noto Sans Hebrew', 'Cairo', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+    background-color: #E5EBF2;
+    color: #0F172A;
+    margin: 0;
+    padding: 0;
+  }
+
+  .font-serif-display {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans SC', 'Noto Sans TC', 'Noto Sans JP', 'Noto Sans KR', 'Cairo', system-ui, sans-serif;
+  }
+
+  .font-arabic,
+  [dir="rtl"] body {
+    font-family: 'Cairo', 'Noto Sans Arabic', 'Noto Sans Hebrew', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  [dir="rtl"] .rtl-flip {
+    transform: scaleX(-1);
+  }
+}
+
+/* UNFCU Brand Gradient Utilities */
+.unfcu-navy-gradient {
+  background: linear-gradient(135deg, #1A4461 0%, #173A52 60%, #123047 100%);
+}
+
+.unfcu-blue-gradient {
+  background: linear-gradient(135deg, #2B73E6 0%, #2166D5 60%, #1953B3 100%);
+}
+
+.unfcu-blue-gradient-hover:hover {
+  background: linear-gradient(135deg, #2166D5 0%, #1A54B5 60%, #154596 100%);
+}
+
+/* Crisp light-mode UNFCU card elevation */
+.banking-card-shadow {
+  box-shadow: 0 2px 10px -2px rgba(23, 58, 82, 0.08), 0 1px 3px 0 rgba(15, 23, 42, 0.05);
+}
+
+.banking-card-shadow-lg {
+  box-shadow: 0 12px 30px -8px rgba(23, 58, 82, 0.14), 0 4px 10px -4px rgba(15, 23, 42, 0.06);
+}
+
+/* Smooth mobile scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

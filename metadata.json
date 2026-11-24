@@ -1,0 +1,7 @@
+{
+  "name": "United Nation Gold Chase Bank",
+  "description": "Professional online banking digital wallet prototype with high-security multi-currency ledger, bilingual RTL support, payment fee review, and administrator reset controls.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
